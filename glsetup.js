@@ -33,11 +33,9 @@ window.addEventListener("load", startup, false);
 function resize(canvas) {
   var realToCSSPixels = window.devicePixelRatio;
 
-  // Lookup the size the browser is displaying the canvas in CSS pixels
-  // and compute a size needed to make our drawingbuffer match it in
-  // device pixels.
-  var displayWidth  = Math.floor(gl.canvas.clientWidth  * realToCSSPixels);
-  var displayHeight = Math.floor(gl.canvas.clientHeight * realToCSSPixels);
+  // Assume css pixel is 2 device pixel
+  var displayWidth  = Math.floor(gl.canvas.clientWidth*realToCSSPixels*2);
+  var displayHeight = Math.floor(gl.canvas.clientHeight*realToCSSPixels*2);
   // Check if the canvas is not the same size.
   if (canvas.width  != displayWidth ||
       canvas.height != displayHeight) {

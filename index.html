@@ -13,51 +13,58 @@
     }
     * {
       font-family:Ubuntu_Mono, sans-serif;
+      color: white;
     }
     /* remove the border */
-    body {
-      margin: 0 !important;
+    header nav{
+      margin: auto;
       padding: 0 !important;
       border: 0;
+      max-width: 1280px;
     }
   </style>
 </head>
 <body style="background:black">
-  <header style="width: 100vw; height: 5em; display: block; background-color: #000000">
-    <div style="position: absolute; left: 1em; color: white; margin-top: 0px; width: 40%">
-      <h1>cabbageman's page</h1>
+  <header style="display: block; background-color: #000000">
+    <div style="position: absolute; width: 50%">
+      <h2 style="float: right; padding-right: 40px; width: 100%; max-width: 600px">cabbageman's page</h2>
     </div>
     <img style="height: 5em; position: absolute; left: 50%; margin-right: -50%; transform: translate(-50%, 0px)" src="cabbageT2.png" >
     <canvas style="width: 100vw; height: 5em; display: block;" id="glcanvas">
       Oh no! Your browser doesn't support canvas!
     </canvas>
-    <nav style="background-color: #00cc00" class="navbar navbar-expand-lg navbar-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Projects</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </ul>
+    <div style="background-color: #00cc00; margin-top: 0px; width: 100vw; display: block;">
+      <nav style="background-color: #00cc00" class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Projects</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
+  <article style="margin: auto; max-width: 1280px;">
+    <p>This is my website - Jasper Chandler</p>
+  </article>
 
   <script id="vertex-shader" type="x-shader/x-vertex">
     attribute vec2 aVertexPosition;
