@@ -31,6 +31,45 @@
       font-size: 1.5rem;
     }
   </style>
+
+  <template id="home">
+    <div class="bd-intro ps-lg-4">
+      <h1 class="bd-title">
+        This is the home page
+      </h1>
+      <p class="bd-lead">
+        pretty cool huh?
+      </p>
+      <img src="cabbageT.png">
+    </div>
+  </template>
+  <template id="AboutMe">
+    <div class="bd-intro ps-lg-4">
+      <h1 class="bd-title">
+        Jasper Chandler
+      </h1>
+      <p class="bd-lead">
+        aka cabbageman
+      </p>
+    </div>
+  </template>
+  <template id="BeeEcology">
+  </template>
+  <template id="InsectBox">
+  </template>
+  <template id="PythonistaWork">
+  </template>
+  <template id="Boxscape">
+  </template>
+  <template id="FluidSimulator">
+  </template>
+  <template id="Webgl">
+  </template>
+  <template id="PyconAUSydney">
+  </template>
+  <template id="STEMCongress">
+  </template>
+
 </head>
 <body style="background:#180022"><div id=app>
   <header style="display: block; background-color: #180022">
@@ -100,30 +139,18 @@
 </div></body>
 
   <script>
-  const BeeEcology = { template: '<div>BeeEcology</div>' }
-  const Nor = {template: '<div class="bd-intro ps-lg-4"><h1 class="bd-title">What is NOR?</h1><p class="bd-lead">NOR pretty pog tho</p></div>' }
-  const InsectBox = { template: '<div>InsectBox</div>' }
-  const PythonistaWork = {template: '<div>PythonistaWork</div>' }
-  const Boxscape = { template: '<div>Boxscape</div>' }
-  const FluidSimulator = { template: '<div>FluidSimulator</div>' }
-  const Webgl = {template: '<div class="bd-intro ps-lg-4"><h1 class="bd-title">What is Webgl?</h1><p class="bd-lead">Webgl pretty pog tho</p></div>' }
-  const PyconAUSydney = { template: '<div>PyconAUSydney</div>' }
-  const STEMCongress = { template: '<div>STEMCongress</div>' }
-  const AboutMe = {template: '<div>AboutMe</div>' }
-  const other = { template: '<div>this is the homepage</div>' }
-
   const routes = [
-    { path: '/BeeEcology', component: BeeEcology },
-    { path: '/NOR', component: Nor },
-    { path: '/InsectBox', component: InsectBox },
-    { path: '/PythonistaWork', component: PythonistaWork },
-    { path: '/Boxscape', component: Boxscape },
-    { path: '/FluidSimulator', component: FluidSimulator },
-    { path: '/Webgl', component: Webgl },
-    { path: '/PyconAUSydney', component: PyconAUSydney },
-    { path: '/STEMCongress', component: STEMCongress },
-    { path: '/AboutMe', component: AboutMe },
-    { path: '*', component: other }
+    { path: '/BeeEcology', component: { template: '#BeeEcology'} },
+    { path: '/NOR', component: { template: '#Nor'} },
+    { path: '/InsectBox', component: { template: '#InsectBox'} },
+    { path: '/PythonistaWork', component: { template: '#PythonistaWork'} },
+    { path: '/Boxscape', component: { template: '#Boxscape'} },
+    { path: '/FluidSimulator', component: { template: '#FluidSimulator'} },
+    { path: '/Webgl', component: { template: '#Webgl'} },
+    { path: '/PyconAUSydney', component: { template: '#PyconAUSydney'} },
+    { path: '/STEMCongress', component: { template: '#STEMCongress'} },
+    { path: '/AboutMe', component: { template: '#AboutMe'} },
+    { path: '*', component: { template: '#home'} }
   ]
 
   const router = new VueRouter({
