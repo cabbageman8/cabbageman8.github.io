@@ -45,23 +45,22 @@
           </div>
         </div>
       </section>
-        <div class="container">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div v-for="key in Object.keys(contentList)" class="col">
-              <router-link v-bind:to="key" class="dropdown-item" style="white-space: normal; margin: 0; padding: 1px; border: 0; border-radius: 3px">
-                <div class="card shadow-sm">
-                  <img v-bind:src="contentList[key].images[0]" class="card-img-top" width="100%" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div v-for="key in Object.keys(contentList)" class="col">
+            <router-link v-bind:to="key" class="dropdown-item" style="white-space: normal; margin: 0; padding: 1px; border: 0; border-radius: 3px">
+              <div class="card shadow-sm">
+                <img v-bind:src="contentList[key].images[0]" class="card-img-top" width="100%" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
 
-                  <div class="card-body">
-                    <h3>{{contentList[key].title}}</h3>
-                    <p class="card-text">{{contentList[key].description}}</p>
-                  </div>
+                <div class="card-body">
+                  <h3>{{contentList[key].title}}</h3>
+                  <p class="card-text">{{contentList[key].description}}</p>
                 </div>
-              </router-link>
-            </div>
+              </div>
+            </router-link>
           </div>
         </div>
-
+      </div>
     </main>
   </template>
   <template id="AboutMe">
@@ -77,10 +76,24 @@
   <template id="normalPage">
     <div class="bd-intro ps-lg-4">
       <h1 class="bd-title">
-        This is a normal page
+        {{content.title}}
       </h1>
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div v-for="image in content.images" class="col">
+            <a v-bind:href="'http://cabbage.moe/'+image" class="dropdown-item" style="white-space: normal; margin: 0; padding: 1px; border: 0; border-radius: 3px">
+              <div class="card shadow-sm">
+                <img v-bind:src="image" class="card-img-top" width="100%">
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
       <p class="bd-lead">
-        but with no content
+        {{content.description}}
+      </p>
+      <p v-for="text in content.paragraphs" class="bd">
+        {{text}}
       </p>
     </div>
   </template>
@@ -163,30 +176,39 @@
       description: "Interactive shows the effects of the recent Australian fires on the endangered green carpenter bee. This bee only lives on a tiny island called kangaroo island, where most of its habitat was burned in early 2020.",
       paragraphs: [],
     },
-    NOR: {
+    Nor: {
       title: "NOR",
       images: [
         "img/nor/IMG_7017.PNG",
         "img/nor/IMG_7012.PNG"],
       description: "A 2D sandbox puzzle game. It features computer generated landscapes, full terrain editing, computer generated logic puzzles and infinite levels.",
-      paragraphs: [],
+      paragraphs: [
+        "qwertyuiop",
+        "asdfghjkl",
+        "zxcvbnm",
+      ],
     }
   }
 
-  const routes = [
-    { path: '/AboutMe', component: { template: '#AboutMe'} },
-    { path: '/', component: {data() {return {contentList: contentList}},template: '#home'} },
-    { path: '*', component: {data() {return {contentList: contentList}},template: '#normalPage'} },
-  ]
-
   const router = new VueRouter({
-    routes
+    routes: [
+      { path: '/AboutMe', component: { template: '#AboutMe'} },
+      { path: '/BeeEcology', component: {data() {return {content: contentList["BeeEcology"]}}, template: '#normalPage'}},
+      { path: '/Nor', component: {data() {return {content: contentList["Nor"]}}, template: '#normalPage'}},
+      { path: '/BeeEcology', component: {data() {return {content: contentList["BeeEcology"]}}, template: '#normalPage'}},
+      { path: '/InsectBox', component: {data() {return {content: contentList["InsectBox"]}}, template: '#normalPage'}},
+      { path: '/PythonistaWork', component: {data() {return {content: contentList["PythonistaWork"]}}, template: '#normalPage'}},
+      { path: '/FluidSimulator', component: {data() {return {content: contentList["FluidSimulator"]}}, template: '#normalPage'}},
+      { path: '/Webgl', component: {data() {return {content: contentList["Webgl"]}}, template: '#normalPage'}},
+      { path: '/PyconAUSydney', component: {data() {return {content: contentList["PyconAUSydney"]}}, template: '#normalPage'}},
+      { path: '/STEMCongress', component: {data() {return {content: contentList["STEMCongress"]}}, template: '#normalPage'}},
+      { path: '*', component: {data() {return {contentList}}, template: '#home'} },
+    ]
   })
 
-  new Vue({
-    el: '#app',
-    router: router,
-  })
+  const app = new Vue({
+    router
+  }).$mount('#app')
   </script>
 
   <script id="vertex-shader" type="x-shader/x-vertex">
