@@ -78,6 +78,9 @@
       <h1 class="bd-title">
         {{content.title}}
       </h1>
+      <p class="bd-lead">
+        {{content.description}}
+      </p>
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div v-for="image in content.images" class="col">
@@ -89,9 +92,6 @@
           </div>
         </div>
       </div>
-      <p class="bd-lead">
-        {{content.description}}
-      </p>
       <p v-for="text in content.paragraphs" class="bd">
         {{text}}
       </p>
@@ -180,7 +180,8 @@
       title: "NOR",
       images: [
         "img/nor/IMG_7017.PNG",
-        "img/nor/IMG_7012.PNG"],
+        "img/nor/IMG_7012.PNG",
+        "img/nor/IMG_7010.PNG"],
       description: "A 2D sandbox puzzle game. It features computer generated landscapes, full terrain editing, computer generated logic puzzles and infinite levels.",
       paragraphs: [
         "qwertyuiop",
