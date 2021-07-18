@@ -74,21 +74,15 @@
       </p>
     </div>
   </template>
-  <template id="BeeEcology">
-  </template>
-  <template id="InsectBox">
-  </template>
-  <template id="PythonistaWork">
-  </template>
-  <template id="Boxscape">
-  </template>
-  <template id="FluidSimulator">
-  </template>
-  <template id="Webgl">
-  </template>
-  <template id="PyconAUSydney">
-  </template>
-  <template id="STEMCongress">
+  <template id="normalPage">
+    <div class="bd-intro ps-lg-4">
+      <h1 class="bd-title">
+        This is a normal page
+      </h1>
+      <p class="bd-lead">
+        but with no content
+      </p>
+    </div>
   </template>
 
 </head>
@@ -180,17 +174,9 @@
   }
 
   const routes = [
-    { path: '/BeeEcology', component: { template: '#BeeEcology'} },
-    { path: '/NOR', component: { template: '#Nor'} },
-    { path: '/InsectBox', component: { template: '#InsectBox'} },
-    { path: '/PythonistaWork', component: { template: '#PythonistaWork'} },
-    { path: '/Boxscape', component: { template: '#Boxscape'} },
-    { path: '/FluidSimulator', component: { template: '#FluidSimulator'} },
-    { path: '/Webgl', component: { template: '#Webgl'} },
-    { path: '/PyconAUSydney', component: { template: '#PyconAUSydney'} },
-    { path: '/STEMCongress', component: { template: '#STEMCongress'} },
     { path: '/AboutMe', component: { template: '#AboutMe'} },
-    { path: '*', component: {data() {return {contentList: contentList}},template: '#home'}}
+    { path: '/', component: {data() {return {contentList: contentList}},template: '#home'} },
+    { path: '*', component: {data() {return {contentList: contentList}},template: '#normalPage'} },
   ]
 
   const router = new VueRouter({
