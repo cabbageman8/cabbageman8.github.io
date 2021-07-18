@@ -30,18 +30,38 @@
     p {
       font-size: 1.5rem;
     }
+    .card {
+      background-color: black;
+    }
   </style>
 
   <template id="home">
-    <div class="bd-intro ps-lg-4">
-      <h1 class="bd-title">
-        This is the home page
-      </h1>
-      <p class="bd-lead">
-        pretty cool huh?
-      </p>
-      <img src="cabbageT.png">
-    </div>
+    <main>
+
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Hello</h1>
+            <p class="lead text-muted">I'm Jasper Chandler, a software developer and student at the University of Adelaide. This website is to showcase my projects.</p>
+          </div>
+        </div>
+      </section>
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div v-for="item in contentList" class="col">
+              <div class="card shadow-sm">
+                <img v-bind:src="item.images[0]" class="card-img-top" width="100%" height="225" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+                <div class="card-body">
+                  <h3>{{item.title}}</h3>
+                  <p class="card-text">{{item.description}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </main>
   </template>
   <template id="AboutMe">
     <div class="bd-intro ps-lg-4">
@@ -74,7 +94,7 @@
 <body style="background:#180022"><div id=app>
   <header style="display: block; background-color: #180022">
     <div style="position: absolute; width: 50%">
-      <h2 style="float: right; padding-right: 40px; width: 100%; max-width: 660px">cabbageman's page</h2>
+      <h2 style="float: right; padding-right: 40px; width: 100%; max-width: 660px">cabbage.moe</h2>
     </div>
     <img style="height: 5em; position: absolute; left: 50%; margin-right: -50%; transform: translate(-50%, 0px)" src="cabbageT2.png" >
     <canvas style="width: 100vw; height: 5em; display: block;" id="glcanvas">
@@ -139,6 +159,21 @@
 </div></body>
 
   <script>
+  const contentList = {
+    BeeEcology: {
+      title: "Bee Ecology Simulator",
+      images: [],
+      description: "Bee ecosystem simpulator",
+      paragraphs: [],
+    },
+    NOR: {
+      title: "NOR",
+      images: ["img/nor/IMG_7012.PNG"],
+      description: "NOR is an IOS app",
+      paragraphs: [],
+    }
+  }
+
   const routes = [
     { path: '/BeeEcology', component: { template: '#BeeEcology'} },
     { path: '/NOR', component: { template: '#Nor'} },
@@ -150,16 +185,17 @@
     { path: '/PyconAUSydney', component: { template: '#PyconAUSydney'} },
     { path: '/STEMCongress', component: { template: '#STEMCongress'} },
     { path: '/AboutMe', component: { template: '#AboutMe'} },
-    { path: '*', component: { template: '#home'} }
+    { path: '*', component: {data() {return {contentList: contentList}},template: '#home'}}
   ]
 
   const router = new VueRouter({
     routes
   })
 
-  const app = new Vue({
-    router
-  }).$mount('#app')
+  new Vue({
+    el: '#app',
+    router: router,
+  })
   </script>
 
   <script id="vertex-shader" type="x-shader/x-vertex">
