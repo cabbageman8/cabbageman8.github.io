@@ -37,7 +37,6 @@
 
   <template id="home">
     <main>
-
       <section class="py-5 text-center container">
         <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
@@ -48,15 +47,17 @@
       </section>
         <div class="container">
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div v-for="item in contentList" class="col">
-              <div class="card shadow-sm">
-                <img v-bind:src="item.images[0]" class="card-img-top" width="100%" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <div v-for="key in Object.keys(contentList)" class="col">
+              <router-link v-bind:to="key" class="dropdown-item" style="white-space: normal; margin: 0; padding: 1px; border: 0; border-radius: 3px">
+                <div class="card shadow-sm">
+                  <img v-bind:src="contentList[key].images[0]" class="card-img-top" width="100%" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
 
-                <div class="card-body">
-                  <h3>{{item.title}}</h3>
-                  <p class="card-text">{{item.description}}</p>
+                  <div class="card-body">
+                    <h3>{{contentList[key].title}}</h3>
+                    <p class="card-text">{{contentList[key].description}}</p>
+                  </div>
                 </div>
-              </div>
+              </router-link>
             </div>
           </div>
         </div>
@@ -171,7 +172,7 @@
       images: [
         "img/nor/IMG_7017.PNG",
         "img/nor/IMG_7012.PNG"],
-      description: "NOR is an IOS app",
+      description: "A 2D sandbox puzzle game. It features computer generated landscapes, full terrain editing, computer generated logic puzzles and infinite levels.",
       paragraphs: [],
     }
   }
