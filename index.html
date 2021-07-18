@@ -50,7 +50,7 @@
           <div v-for="key in Object.keys(contentList)" class="col">
             <router-link v-bind:to="key" class="dropdown-item" style="white-space: normal; margin: 0; padding: 1px; border: 0; border-radius: 3px">
               <div class="card shadow-sm">
-                <img v-bind:src="contentList[key].images[0]" class="card-img-top" width="100%" focusable="false">
+                <img v-bind:src="contentList[key].images[0]" class="card-img-top" width="100%" focusable="false" loading="lazy">
 
                 <div class="card-body">
                   <h3>{{contentList[key].title}}</h3>
@@ -81,7 +81,7 @@
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div v-for="image in content.images" class="col">
-            <a v-bind:href="'http://cabbage.moe/'+image" class="dropdown-item" style="white-space: normal; margin: 0; padding: 1px; border: 0; border-radius: 3px" width="100%" focusable="false">
+            <a v-bind:href="'http://cabbage.moe/'+image" class="dropdown-item" style="white-space: normal; margin: 0; padding: 1px; border: 0; border-radius: 3px" width="100%" focusable="false" loading="lazy">
               <div class="card shadow-sm">
                 <img v-bind:src="image" class="card-img-top" width="100%">
               </div>
