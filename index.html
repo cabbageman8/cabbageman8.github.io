@@ -127,6 +127,13 @@
               </div>
             </a>
           </div>
+          <div v-for="vid in content.vids" class="col">
+            <div class="card shadow-sm">
+              <video controls="controls" preload="metadata" muted loop width="100%">
+                <source v-bind:src="vid">
+              </video>
+            </div>
+          </div>
         </div>
       </div>
       <p v-for="text in content.paragraphs" class="bd" style="padding-top: 1rem">
@@ -194,6 +201,7 @@
     </div>
   </header>
   <article style="margin: auto; max-width: 1320px;">
+
     <!-- route outlet -->
     <!-- component matched by the route will render here -->
     <router-view></router-view>
@@ -256,6 +264,10 @@
       year: "2015-2018",
       tags: ["Python","iPad","Pythonista"],
       images: [],
+      vids: [
+        "vids/IMG_6911.TRIM.MOV",
+        "vids/IMG_6899.TRIM.MOV",
+        "vids/IMG_6921.TRIM.MOV"],
       description: "While learning python, I developed many miscellaneous projects on iPad using the IDE app Pythonista.",
       paragraphs: [
         "",
