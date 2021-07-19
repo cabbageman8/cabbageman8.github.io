@@ -21,13 +21,13 @@
       color: white;
     }
     /* remove the border */
-    header nav{
+    nav{
       margin: auto;
       padding: 0 !important;
       border: 0;
       max-width: 1320px;
     }
-    p {
+    p, ul {
       font-size: 1.5rem;
     }
     .card {
@@ -54,6 +54,9 @@
 
                 <div class="card-body">
                   <h3>{{contentList[key].title}}</h3>
+                  <span v-for="tag in contentList[key].tags" class="bd">
+                    #{{tag}}
+                  </span>
                   <p class="card-text">{{contentList[key].description}}</p>
                 </div>
               </div>
@@ -71,6 +74,25 @@
       <p class="bd-lead">
         aka cabbageman
       </p>
+      <h3>Bio</h3>
+      <p class="bd">
+        I love to build and understand logical systems; since I started with python in 2015 I have been making games and simulations. These projects are driven by my love for learning via exploration and my nature to think outside the box. I aspire to work on software systems that matter in the world and present novel challenges to overcome.
+      </p>
+      <h3>Skills Summary</h3>
+      <ul>
+        <li>Experienced in: Python, C++, Javascript, HTML, OpenGL.</li>
+        <li>I have also used: Java, SQL, Swift, MPI, OpenCL, HLSL, C, C#.</li>
+        <li>Practical skills: Soldering, Discrete Electronics, Communication, Mac OS, Windows, Linux, Web.</li>
+      </ul>
+      <h3>Education</h3>
+      <ul>
+        <li>Bachelor of Mathematical & Computer Sciences 2020 – current: The University of Adelaide</li>
+      </ul>
+      <h3>Contact</h3>
+      <ul>
+        <li>Discord: cabbageman#7128</li>
+        <li>Email: cabbageman@optusnet.com.au</li>
+      </ul>
     </div>
   </template>
   <template id="normalPage">
@@ -78,6 +100,9 @@
       <h1 class="bd-title">
         {{content.title}}
       </h1>
+      <span v-for="tag in content.tags" class="bd">
+        #{{tag}}
+      </span>
       <p class="bd-lead">
         {{content.description}}
       </p>
@@ -111,7 +136,7 @@
     <div style="background-color: #00cc00; margin-top: 0px; width: 100vw; display: block;">
       <nav style="background-color: #00cc00" class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-          <router-link to="/" class="navbar-brand">Projects</router-link>
+          <router-link to="/" class="navbar-brand" style="font-size: 1.5rem;">Projects</router-link>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -170,19 +195,27 @@
   const contentList = {
     BeeEcology: {
       title: "Bee Ecology Simulator",
+      tags: ["Python","SAM","RPi","Pygame"],
       images: [
         "img/Bee/img1.png",
         "img/Bee/img2.png"],
       description: "Interactive shows the effects of the recent Australian fires on the endangered green carpenter bee. This bee only lives on a tiny island called kangaroo island, where most of its habitat was burned in early 2020.",
-      paragraphs: [],
+      paragraphs: [
+        "In a team with SA Museum scientist Remko Leijs and the lead designer, I created an ecosystem simulator demonstrating the effect of bushfire on native bees. I created the simulation using python and used algorithms to model 25 years worth of data. Working with a scientist allowed the simulation to be reasonably accurate. The final simulator was in the SA Museum foyer for 6 months and is subsequently used by Remko Leijs for public demonstrations. ",
+        "The system was entirely coded in Python and used custom http net code to send simulation data from a touch screen computer (where the user controls the simulation) to a second 4K screen computer over internal wifi.",
+        "When making the software, I had to solve lots of interesting problems, often requiring the implementation of a custom data structure or algorithm. For example, the simulation used a “Z-order” data structure to store geographic information. The data about each 9 hectare tile (fire history, terrain types, etc) was stored in an object and the Z-order map placed the tiles in a 32x32 grid (9216 hectares total). ",
+        "The simulation used mathematical models to determine how the tiles evolve over time and how they interact with each other. These algorithmic models were created based on scientific data and a body of research going back 25 years. The simulation starts at 2007 and allows the user to simulate the 2020 fire according to satellite imagery, and simulate an additional 30 years into the future. The time steps in the simulation were 1/8 of a year so that each tile could be updated twice per season. Therefor over the course of the 43 year simulation 2007-2050, the 1024 tiles would receive 344 updates, each doing complex calculations according to multiple factors and each effecting the tiles around it. ",
+        "In order to create the Z-order map for 2007 (the terrain which every user starts with), I used the mathematical models from the simulator. I made a second program which takes png images of fire history and terrain data as input (The fire history map had data going back 50 years) and using these inputs the program simulated the history of the terrain in order to get accurate starting data for all the unknown parameters in the map.",
+      ],
     },
     Nor: {
       title: "NOR",
+      tags: ["Python","IOS","SceneKit"],
       images: [
         "img/nor/IMG_7017.PNG",
         "img/nor/IMG_7012.PNG",
         "img/nor/IMG_7010.PNG"],
-      description: "A 2D sandbox puzzle game. It features computer generated landscapes, full terrain editing, computer generated logic puzzles and infinite levels.",
+      description: "A 2D sandbox puzzle game for iPad. It features computer generated landscapes, full terrain editing, computer generated logic puzzles and infinite levels.",
       paragraphs: [
         "qwertyuiop",
         "asdfghjkl",
