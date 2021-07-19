@@ -54,6 +54,9 @@
 
                 <div class="card-body">
                   <h3>{{contentList[key].title}}</h3>
+                  <span class="bd">
+                    {{contentList[key].year}}
+                  </span>
                   <span v-for="tag in contentList[key].tags" class="bd">
                     #{{tag}}
                   </span>
@@ -91,6 +94,7 @@
       <h3>Contact</h3>
       <ul>
         <li>Discord: cabbageman#7128</li>
+        <li>Github: cabbageman8</li>
         <li>Email: cabbageman@optusnet.com.au</li>
       </ul>
     </div>
@@ -100,6 +104,9 @@
       <h1 class="bd-title">
         {{content.title}}
       </h1>
+      <span class="bd">
+        {{content.year}}
+      </span>
       <span v-for="tag in content.tags" class="bd">
         #{{tag}}
       </span>
@@ -195,10 +202,12 @@
   const contentList = {
     BeeEcology: {
       title: "Bee Ecology Simulator",
+      year: "2020",
       tags: ["Python","SAM","RPi","Pygame"],
       images: [
-        "img/Bee/img1.png",
-        "img/Bee/img2.png"],
+        "img/Bee/IMG_0797.JPG",
+        "img/Bee/img2.png",
+        "img/Bee/img99.png"],
       description: "Interactive shows the effects of the recent Australian fires on the endangered green carpenter bee. This bee only lives on a tiny island called kangaroo island, where most of its habitat was burned in early 2020.",
       paragraphs: [
         "In a team with SA Museum scientist Remko Leijs and the lead designer, I created an ecosystem simulator demonstrating the effect of bushfire on native bees. I created the simulation using python and used algorithms to model 25 years worth of data. Working with a scientist allowed the simulation to be reasonably accurate. The final simulator was in the SA Museum foyer for 6 months and is subsequently used by Remko Leijs for public demonstrations. ",
@@ -210,18 +219,33 @@
     },
     Nor: {
       title: "NOR",
+      year: "2018",
       tags: ["Python","IOS","SceneKit"],
       images: [
         "img/nor/IMG_7017.PNG",
-        "img/nor/IMG_7012.PNG",
-        "img/nor/IMG_7010.PNG"],
+        "img/nor/IMG_7014.PNG",
+        "img/nor/IMG_7010.PNG",
+        "img/nor/IMG_7007.PNG",
+        "img/nor/IMG_7009.PNG",
+        "img/nor/IMG_7016.PNG"],
       description: "A 2D sandbox puzzle game for iPad. It features computer generated landscapes, full terrain editing, computer generated logic puzzles and infinite levels.",
       paragraphs: [
         "qwertyuiop",
         "asdfghjkl",
         "zxcvbnm",
       ],
-    }
+    },
+    InsectBox: {
+      title: "Insect Simulation Box",
+      year: "2019",
+      tags: ["Python","SAM","RPi","TKinter"],
+      images: [
+        ],
+      description: "RFID based interactive where a range of insect specimens can be scanned in order to simulate how they compete with each other in an ecosystem.",
+      paragraphs: [
+        "The project was contained in a stand-alone box with a battery, display, buttons, RFID scanner and specimens. This allowed the box to function as a traveling interactive for school visits.",
+      ],
+    },
   }
 
   const router = new VueRouter({
@@ -229,9 +253,9 @@
       { path: '/AboutMe', component: { template: '#AboutMe'} },
       { path: '/BeeEcology', component: {data() {return {content: contentList["BeeEcology"]}}, template: '#normalPage'}},
       { path: '/Nor', component: {data() {return {content: contentList["Nor"]}}, template: '#normalPage'}},
-      { path: '/BeeEcology', component: {data() {return {content: contentList["BeeEcology"]}}, template: '#normalPage'}},
       { path: '/InsectBox', component: {data() {return {content: contentList["InsectBox"]}}, template: '#normalPage'}},
       { path: '/PythonistaWork', component: {data() {return {content: contentList["PythonistaWork"]}}, template: '#normalPage'}},
+      { path: '/Boxscape', component: {data() {return {content: contentList["Boxscape"]}}, template: '#normalPage'}},
       { path: '/FluidSimulator', component: {data() {return {content: contentList["FluidSimulator"]}}, template: '#normalPage'}},
       { path: '/Webgl', component: {data() {return {content: contentList["Webgl"]}}, template: '#normalPage'}},
       { path: '/PyconAUSydney', component: {data() {return {content: contentList["PyconAUSydney"]}}, template: '#normalPage'}},
