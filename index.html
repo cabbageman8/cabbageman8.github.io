@@ -106,7 +106,7 @@
   </template>
   <template id="normalPage">
     <div class="bd-intro ps-lg-4">
-      <h1 class="bd-title">
+      <h1 class="bd-title" style="padding-top: 1rem">
         {{content.title}}
       </h1>
       <span class="bd">
@@ -129,7 +129,7 @@
           </div>
         </div>
       </div>
-      <p v-for="text in content.paragraphs" class="bd">
+      <p v-for="text in content.paragraphs" class="bd" style="padding-top: 1rem">
         {{text}}
       </p>
     </div>
@@ -286,6 +286,26 @@
       tags: ["WebGL","Fragment-Shader","Fractals"],
       images: [],
       description: "Using knowledge of fragment shaders, explored mathematical concepts in web browser.",
+      paragraphs: [
+        "",
+      ],
+    },
+    PyconAUSydney: {
+      title: "Speaker at Pycon-AU",
+      year: "2018",
+      tags: ["Python","NOR","Sydney","Public-Event"],
+      images: [],
+      description: "I gave a talk at the national python convention to speak about my journey from learning python to creating my second iPad game “NOR”.",
+      paragraphs: [
+        "",
+      ],
+    },
+    STEMCongress: {
+      title: "STEM Aboriginal Student Congress",
+      year: "2018",
+      tags: ["STEM","Python","Public-Event"],
+      images: [],
+      description: "Helped students from across the state to learn about software development. By the end the students had each made a basic IOS app using SpriteKit in Pythonista",
       paragraphs: [
         "",
       ],
