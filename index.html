@@ -208,13 +208,18 @@
     <router-view></router-view>
 
     <footer style="padding-top: 10em">
-
+      cabbage.moe has recived <span id="visits">...</span> visits
     </footer>
   </article>
 
 </div></body>
-
-  <script>
+<script>
+  function cb(response) {
+      document.getElementById('visits').innerText = response.value;
+  }
+</script>
+<script async src="https://api.countapi.xyz/hit/cabbage.moe/visits?callback=cb"></script>
+<script>
   const contentList = {
     BeeEcology: {
       title: "Bee Ecology Simulator",
