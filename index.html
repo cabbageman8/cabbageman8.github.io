@@ -217,8 +217,16 @@
       </nav>
     </div>
   </header>
-  <article style="margin: auto; max-width: 1320px;">
 
+  <svg style="position: absolute; z-index: -1;" height="100%" width="100%" version="1.1" viewBox="0,0,500,500">
+    <!-- <polygon v-bind:points="(250+100*Math.cos(1*Math.PI*2/5))+','+(250+100*Math.sin(1*Math.PI*2/5))+' '+(250+100*Math.cos(2*Math.PI*2/5))+','+(250+100*Math.sin(2*Math.PI*2/5))+' '+(250+100*Math.cos(3*Math.PI*2/5))+','+(250+100*Math.sin(3*Math.PI*2/5))+' '+(250+100*Math.cos(4*Math.PI*2/5))+','+(250+100*Math.sin(4*Math.PI*2/5))+' '+(250+100*Math.cos(5*Math.PI*2/5))+','+(250+100*Math.sin(5*Math.PI*2/5))" style="fill:lime;stroke:purple;stroke-width:1" /> -->
+    <g v-for="i in 5">
+      <!-- <path v-bind:d="'M'+1000*Math.cos(i)+','+1000*Math.sin(i)+' L 250,250'" v-bind:stroke="'rgb('+255*Math.sin(i)+','+255*Math.cos(i)+','+255*Math.tan(i)+')'" stroke-width="5" fill="none"/> -->
+      <polygon v-bind:points="(250+161.8*Math.cos(i*Math.PI*2/5)+100*Math.cos(1*Math.PI*2/5))+','+(250+161.8*Math.sin(i*Math.PI*2/5)+100*Math.sin(1*Math.PI*2/5))+' '+(250+161.8*Math.cos(i*Math.PI*2/5)+100*Math.cos(2*Math.PI*2/5))+','+(250+161.8*Math.sin(i*Math.PI*2/5)+100*Math.sin(2*Math.PI*2/5))+' '+(250+161.8*Math.cos(i*Math.PI*2/5)+100*Math.cos(3*Math.PI*2/5))+','+(250+161.8*Math.sin(i*Math.PI*2/5)+100*Math.sin(3*Math.PI*2/5))+' '+(250+161.8*Math.cos(i*Math.PI*2/5)+100*Math.cos(4*Math.PI*2/5))+','+(250+161.8*Math.sin(i*Math.PI*2/5)+100*Math.sin(4*Math.PI*2/5))+' '+(250+161.8*Math.cos(i*Math.PI*2/5)+100*Math.cos(5*Math.PI*2/5))+','+(250+161.8*Math.sin(i*Math.PI*2/5)+100*Math.sin(5*Math.PI*2/5))" style="fill:none; stroke:purple; stroke-width:1" />
+    </g>
+  </svg>
+
+  <article style="margin: auto; max-width: 1320px;">
     <!-- route outlet -->
     <!-- component matched by the route will render here -->
     <router-view></router-view>
