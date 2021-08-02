@@ -223,17 +223,17 @@
     <g v-for="i in 5" style="fill:none; opacity: 0.5; stroke:purple; stroke-width:1">
       <g v-for="p in 5"><path v-bind:d="'M'+(500+161.8*Math.cos((i+0.5)*Math.PI*2/5)+100*Math.cos((p+0.5)*Math.PI*2/5))+','+(500+161.8*Math.sin((i+0.5)*Math.PI*2/5)+100*Math.sin((p+0.5)*Math.PI*2/5))+'L'+
                                             (500+161.8*Math.cos((i+0.5)*Math.PI*2/5)+100*Math.cos((p+1.5)*Math.PI*2/5))+','+(500+161.8*Math.sin((i+0.5)*Math.PI*2/5)+100*Math.sin((p+1.5)*Math.PI*2/5))"/>
-                                            <animate attributeName="opacity" values="0.5;0.2;0.5" dur="3s" v-bind:begin="Math.sin(i+p)+'s'" repeatCount="indefinite"/>
+                                            <animate attributeName="opacity" values="0.5;0.2;0.5" dur="3s" v-bind:begin="(Math.sin(i+p)-1)+'s'" repeatCount="indefinite"/>
                                           </g>
       <g v-for="j in 5">
         <g v-for="p in 5"><path v-bind:d="'M'+(500+423.6*Math.cos(j*Math.PI*2/5)+161.8*Math.cos(i*Math.PI*2/5)+100*Math.cos((p+0)*Math.PI*2/5))+','+(500+423.6*Math.sin(j*Math.PI*2/5)+161.8*Math.sin(i*Math.PI*2/5)+100*Math.sin((p+0)*Math.PI*2/5))+'L'+
                                               (500+423.6*Math.cos(j*Math.PI*2/5)+161.8*Math.cos(i*Math.PI*2/5)+100*Math.cos((p+1)*Math.PI*2/5))+','+(500+423.6*Math.sin(j*Math.PI*2/5)+161.8*Math.sin(i*Math.PI*2/5)+100*Math.sin((p+1)*Math.PI*2/5))"/>
-                                              <animate attributeName="opacity" values="0.5;0.2;0.5" dur="3s" v-bind:begin="Math.sin(i+j+p)+'s'" repeatCount="indefinite"/>
+                                              <animate attributeName="opacity" values="0.5;0.2;0.5" dur="3s" v-bind:begin="(Math.sin(i+j+p)-1)+'s'" repeatCount="indefinite"/>
                                             </g>
         <g v-for="k in 5">
           <g v-for="p in 5"><path v-bind:d="'M'+(500+1109*Math.cos((k+0.5)*Math.PI*2/5)+423.6*Math.cos((j+0.5)*Math.PI*2/5)+161.8*Math.cos((i+0.5)*Math.PI*2/5)+100*Math.cos((p+0.5)*Math.PI*2/5))+','+(500+1109*Math.sin((k+0.5)*Math.PI*2/5)+423.6*Math.sin((j+0.5)*Math.PI*2/5)+161.8*Math.sin((i+0.5)*Math.PI*2/5)+100*Math.sin((p+0.5)*Math.PI*2/5))+'L'+
                                                 (500+1109*Math.cos((k+0.5)*Math.PI*2/5)+423.6*Math.cos((j+0.5)*Math.PI*2/5)+161.8*Math.cos((i+0.5)*Math.PI*2/5)+100*Math.cos((p+1.5)*Math.PI*2/5))+','+(500+1109*Math.sin((k+0.5)*Math.PI*2/5)+423.6*Math.sin((j+0.5)*Math.PI*2/5)+161.8*Math.sin((i+0.5)*Math.PI*2/5)+100*Math.sin((p+1.5)*Math.PI*2/5))"/>
-                                                <animate attributeName="opacity" values="0.5;0.7;0.5" dur="3s" v-bind:begin="Math.sin(i+j+k+p)+'s'" repeatCount="indefinite"/>
+                                                <animate attributeName="opacity" values="0.5;0.7;0.5" dur="3s" v-bind:begin="(Math.sin(i+j+k+p)-1)+'s'" repeatCount="indefinite"/>
                                               </g>
         </g>
       </g>
