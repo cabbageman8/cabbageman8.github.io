@@ -33,12 +33,18 @@
       border: 0;
       max-width: 1320px;
     }
-    p, ul {
+    p, li , li span{
       font-family: Roboto, sans-serif;
       font-size: 1.2rem;
     }
     .card {
       background-color: black;
+    }
+    h3 {
+      margin-top: 1.5em;
+    }
+    h1 {
+      margin-top: 2em;
     }
   </style>
 
@@ -88,23 +94,21 @@
       <p class="bd">
         I love to build and understand logical systems; since I started with python in 2015 I have been making games and simulations.
         These projects are driven by my love for learning via exploration and my nature to think outside the box.
-        I aspire to work on software systems that matter in the world and present novel challenges to overcome.
       </p>
       <h3>Skills Summary</h3>
       <ul>
         <li>Experienced in: Python, C++, Javascript, HTML, OpenGL.</li>
         <li>I have also used: Java, SQL, Swift, MPI, OpenCL, HLSL, C, C#.</li>
-        <li>Practical skills: Soldering, Discrete Electronics, Communication, Mac OS, Windows, Linux, Web.</li>
       </ul>
       <h3>Education</h3>
       <ul>
-        <li>Bachelor of Mathematical & Computer Sciences 2020 – current: The University of Adelaide</li>
+        <li>Bachelor of Mathematical & Computer Sciences : The University of Adelaide</li>
       </ul>
       <h3>Contact</h3>
       <ul>
-        <li>Discord: cabbageman#7128</li>
+        <li>Discord: cab<span>b<span hidden>bla</span>ageman#</span>7128</li>
         <li>Github: cabbageman8</li>
-        <li>Email: cabb<span>agebot@icl</span>oud.com</li>
+        <li>Email: cabb<span>agebot<span hidden>bla</span>@icl</span>oud.com</li>
       </ul>
     </div>
   </template>
@@ -113,12 +117,14 @@
       <h1 class="bd-title" style="padding-top: 1rem">
         {{content.title}}
       </h1>
-      <span class="bd">
-        {{content.year}}
-      </span>
-      <span v-for="tag in content.tags" class="bd">
-        #{{tag}}
-      </span>
+      <div style="padding-bottom: 1.5em;">
+        <span class="bd">
+          {{content.year}}
+        </span>
+        <span v-for="tag in content.tags" class="bd">
+          #{{tag}}
+        </span>
+      </div>
       <p class="bd-lead">
         {{content.description}}
       </p>
