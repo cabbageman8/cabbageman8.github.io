@@ -149,6 +149,12 @@
       <p v-for="text in content.paragraphs" class="bd" style="padding-top: 1rem">
         {{text}}
       </p>
+      <ul v-if="content.links">
+        <h3>Links:</h3>
+        <li v-for="link in Object.keys(content.links)" class="bd" style="padding-top: 1rem">
+          {{link}} : <a v-bind:href="content.links[link]" target="_blank">{{content.links[link].substr(8)}}</a>
+        </li>
+      </ul>
     </div>
   </template>
 
@@ -286,6 +292,10 @@
         "The simulation used mathematical models to determine how the tiles evolve over time and how they interact with each other. These algorithmic models were created based on scientific data and a body of research going back 25 years. The simulation starts at 2007 and allows the user to simulate the 2020 fire according to satellite imagery, and simulate an additional 30 years into the future. The time steps in the simulation were 1/8 of a year so that each tile could be updated twice per season. Therefor over the course of the 43 year simulation 2007-2050, the 1024 tiles would receive 344 updates, each doing complex calculations according to multiple factors and each effecting the tiles around it. ",
         "In order to create the Z-order map for 2007 (the terrain which every user starts with), I used the mathematical models from the simulator. I made a second program which takes png images of fire history and terrain data as input (The fire history map had data going back 50 years) and using these inputs the program simulated the history of the terrain in order to get accurate starting data for all the unknown parameters in the map.",
       ],
+      links: {
+        "wheenbeefoundation" : "https://www.wheenbeefoundation.org.au/news-events/buzz/bee-ecology-exhibition",
+
+      }
     },
     Nor: {
       title: "NOR",
@@ -302,6 +312,9 @@
       paragraphs: [
         "The game used advanced features such as vector graphics, procedural generation, RW bitmap objects, and OpenGL shaders. The player could move freely around a 2D world. Each zone in this world has distinct sky, rock, and flora. The flora included procedurally generated bushes, trees, and grass. The world could be edited by the player using a creative menu; where rock can be created or destroyed as the player desires. Each zone may be blocked by a logic puzzle based on real world electronic wiring, and once the player made the correct circuit, the player could access new zones."
       ],
+      links: {
+        "NOR on AppAdvice" : "https://appadvice.com/app/nor/1433225207",
+      }
     },
     InsectBox: {
       title: "Insect Simulation Box",
@@ -316,7 +329,14 @@
       description: "RFID based interactive where a range of insect specimens can be scanned in order to simulate how they compete with each other in an ecosystem.",
       paragraphs: [
         "The project was contained in a stand-alone box with a battery, display, buttons, RFID scanner and specimens. This allowed the box to function as a traveling interactive for school visits.",
+        "The hardware configuration centered around a Raspberry Pi 3b with peripheral HDMI display, amplified speakers, usb rfid scanner, MakeyMakey usb input-controller, large rechargeable battery cell, RetroPSU circuit for battery charging via usb.",
+        "The software was written in python and used TKinter for gui. All inputs were parsed as keystroke events, including push button presses and rfid scans. When an insect was scanned, the usb scanner would enter the id of that insect as keystrokes, telling python which insect it is. After scanning multiple insects, pressing the blue button would start the simulation, which creates a graph of the population and food recources over time. Pressing the green button at any time would activate text to speach; where the text on screen gets read out through the speakers.",
       ],
+      links: {
+        "Raspberry Pi 3b" : "https://www.raspberrypi.org/products/raspberry-pi-3-model-b",
+        "MakeyMakey" : "https://makeymakey.com/",
+        "RetroPSU" : "https://www.heldergametech.com/shop/gameboy-zero/retropsu",
+      }
     },
     PythonistaWork: {
       title: "IOS Development in Pythonista",
@@ -346,6 +366,9 @@
       paragraphs: [
         "",
       ],
+      links: {
+        "Boxscape on AppAdvice" : "https://appadvice.com/app/boxscape/1053771238",
+      }
     },
     FluidSimulator: {
       title: "Fluid Simulator",
