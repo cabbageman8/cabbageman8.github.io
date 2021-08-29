@@ -1,149 +1,149 @@
 const contentList = {
-  BeeEcology: {
-    title: "Bee Ecology Simulator",
-    year: "2020",
-    tags: ["Python","SAM","RPi","Pygame"],
-    images: [
+  "BeeEcology": {
+    "title": "Bee Ecology Simulator",
+    "year": "2020",
+    "tags": ["Python","SAM","RPi","Pygame"],
+    "images": [
       "img/Bee/DSC_0256.JPG",
       "img/Bee/img78563.png",
       "img/Bee/img99.png",
       "img/Bee/DSC_0229.JPG",
       "img/Bee/DSC_0262.JPG",
       "img/Bee/DSC_0233.JPG"],
-    description: "Interactive shows the effects of the recent Australian fires on the endangered green carpenter bee. This bee only lives on a tiny island called kangaroo island, where most of its habitat was burned in early 2020.",
-    paragraphs: [
+    "description": "Interactive shows the effects of the recent Australian fires on the endangered green carpenter bee. This bee only lives on a tiny island called kangaroo island, where most of its habitat was burned in early 2020.",
+    "paragraphs": [
       "In a team with SA Museum scientist Remko Leijs and the lead designer, I created an ecosystem simulator demonstrating the effect of bushfire on native bees. I created the simulation using python and used algorithms to model 25 years worth of data. Working with a scientist allowed the simulation to be reasonably accurate. The final simulator was in the SA Museum foyer for 6 months and is subsequently used by Remko Leijs for public demonstrations. ",
       "The system was entirely coded in Python and used custom http net code to send simulation data from a touch screen computer (where the user controls the simulation) to a second 4K screen computer over internal wifi.",
       "When making the software, I had to solve lots of interesting problems, often requiring the implementation of a custom data structure or algorithm. For example, the simulation used a “Z-order” data structure to store geographic information. The data about each 9 hectare tile (fire history, terrain types, etc) was stored in an object and the Z-order map placed the tiles in a 32x32 grid (9216 hectares total). ",
       "The simulation used mathematical models to determine how the tiles evolve over time and how they interact with each other. These algorithmic models were created based on scientific data and a body of research going back 25 years. The simulation starts at 2007 and allows the user to simulate the 2020 fire according to satellite imagery, and simulate an additional 30 years into the future. The time steps in the simulation were 1/8 of a year so that each tile could be updated twice per season. Therefor over the course of the 43 year simulation 2007-2050, the 1024 tiles would receive 344 updates, each doing complex calculations according to multiple factors and each effecting the tiles around it. ",
-      "In order to create the Z-order map for 2007 (the terrain which every user starts with), I used the mathematical models from the simulator. I made a second program which takes png images of fire history and terrain data as input (The fire history map had data going back 50 years) and using these inputs the program simulated the history of the terrain in order to get accurate starting data for all the unknown parameters in the map.",
+      "In order to create the Z-order map for 2007 (the terrain which every user starts with), I used the mathematical models from the simulator. I made a second program which takes png images of fire history and terrain data as input (The fire history map had data going back 50 years) and using these inputs the program simulated the history of the terrain in order to get accurate starting data for all the unknown parameters in the map."
     ],
-    links: {
-      "Wheen Bee Foundation" : "https://www.wheenbeefoundation.org.au/news-events/buzz/bee-ecology-exhibition",
+    "links": {
+      "Wheen Bee Foundation" : "https://www.wheenbeefoundation.org.au/news-events/buzz/bee-ecology-exhibition"
     }
   },
-  Nor: {
-    title: "NOR",
-    year: "2018",
-    tags: ["Python","iPad","SceneKit"],
-    images: [
+  "Nor": {
+    "title": "NOR",
+    "year": "2018",
+    "tags": ["Python","iPad","SceneKit"],
+    "images": [
       "img/nor/IMG_7017.PNG",
       "img/nor/IMG_7014.PNG",
       "img/nor/IMG_7010.PNG",
       "img/nor/IMG_7007.PNG",
       "img/nor/IMG_7009.PNG",
       "img/nor/IMG_7016.PNG"],
-    description: "A 2D sandbox puzzle game for iPad. It features computer generated landscapes, full terrain editing, computer generated logic puzzles and infinite levels.",
-    paragraphs: [
+    "description": "A 2D sandbox puzzle game for iPad. It features computer generated landscapes, full terrain editing, computer generated logic puzzles and infinite levels.",
+    "paragraphs": [
       "The game used advanced features such as vector graphics, procedural generation, RW bitmap objects, and OpenGL shaders. The player could move freely around a 2D world. Each zone in this world has distinct sky, rock, and flora. The flora included procedurally generated bushes, trees, and grass. The world could be edited by the player using a creative menu; where rock can be created or destroyed as the player desires. Each zone may be blocked by a logic puzzle based on real world electronic wiring, and once the player made the correct circuit, the player could access new zones."
     ],
-    links: {
-      "NOR on AppAdvice" : "https://appadvice.com/app/nor/1433225207",
+    "links": {
+      "NOR on AppAdvice" : "https://appadvice.com/app/nor/1433225207"
     }
   },
-  InsectBox: {
-    title: "Insect Simulation Box",
-    year: "2019",
-    tags: ["Python","SAM","RPi","TKinter"],
-    images: [
+  "InsectBox": {
+    "title": "Insect Simulation Box",
+    "year": "2019",
+    "tags": ["Python","SAM","RPi","TKinter"],
+    "images": [
       "img/InsectBox/IMG_1129.JPG",
       "img/InsectBox/IMG_1131.JPG",
       "img/InsectBox/IMG_1130.JPG",
       "img/InsectBox/img3456.png",
       "img/InsectBox/img9.jpeg"],
-    description: "RFID based interactive where a range of insect specimens can be scanned in order to simulate how they compete with each other in an ecosystem.",
-    paragraphs: [
+    "description": "RFID based interactive where a range of insect specimens can be scanned in order to simulate how they compete with each other in an ecosystem.",
+    "paragraphs": [
       "The project was contained in a stand-alone box with a battery, display, buttons, RFID scanner and specimens. This allowed the box to function as a traveling interactive for school visits.",
       "The hardware configuration centered around a Raspberry Pi 3b with peripheral HDMI display, amplified speakers, usb rfid scanner, MakeyMakey usb input-controller, large rechargeable battery cell, RetroPSU circuit for battery charging via usb.",
-      "The software was written in python and used TKinter for gui. All inputs were parsed as keystroke events, including push button presses and rfid scans. When an insect was scanned, the usb scanner would enter the id of that insect as keystrokes, telling python which insect it is. After scanning multiple insects, pressing the blue button would start the simulation, which creates a graph of the population and food recources over time. Pressing the green button at any time would activate text to speach; where the text on screen gets read out through the speakers.",
+      "The software was written in python and used TKinter for gui. All inputs were parsed as keystroke events, including push button presses and rfid scans. When an insect was scanned, the usb scanner would enter the id of that insect as keystrokes, telling python which insect it is. After scanning multiple insects, pressing the blue button would start the simulation, which creates a graph of the population and food recources over time. Pressing the green button at any time would activate text to speach; where the text on screen gets read out through the speakers."
     ],
-    links: {
+    "links": {
       "Raspberry Pi 3b" : "https://www.raspberrypi.org/products/raspberry-pi-3-model-b",
       "MakeyMakey" : "https://makeymakey.com/",
-      "RetroPSU" : "https://www.heldergametech.com/shop/gameboy-zero/retropsu",
+      "RetroPSU" : "https://www.heldergametech.com/shop/gameboy-zero/retropsu"
     }
   },
-  PythonistaWork: {
-    title: "IOS Development in Pythonista",
-    year: "2015-2018",
-    tags: ["Python","iPad","Pythonista"],
-    images: ["img/PythonistaWork/IMG_7481.PNG"],
-    vids: [
+  "PythonistaWork": {
+    "title": "IOS Development in Pythonista",
+    "year": "2015-2018",
+    "tags": ["Python","iPad","Pythonista"],
+    "images": ["img/PythonistaWork/IMG_7481.PNG"],
+    "vids": [
       "vids/IMG_6911.TRIM.MOV",
       "vids/IMG_6899.TRIM.MOV",
       "vids/IMG_6921.TRIM.MOV",
       "vids/IMG_6929.TRIM.MOV",
       "vids/IMG_6933.TRIM.MOV"],
-    description: "While learning python, I developed many miscellaneous projects on iPad using the IDE app Pythonista.",
-    paragraphs: [
-      "",
-    ],
+    "description": "While learning python, I developed many miscellaneous projects on iPad using the IDE app Pythonista.",
+    "paragraphs": [
+      ""
+    ]
   },
-  Boxscape: {
-    title: "Boxscape",
-    year: "2015",
-    tags: ["Python","iPad","Pythonista"],
-    images: [
+  "Boxscape": {
+    "title": "Boxscape",
+    "year": "2015",
+    "tags": ["Python","iPad","Pythonista"],
+    "images": [
       "img/Boxscape/750x750bb.jpeg",
       "img/Boxscape/45670bb.jpeg",
       "img/Boxscape/75484560bb.jpeg"],
-    description: "My first published software. An arcade style challenge game.",
-    paragraphs: [
-      "",
+    "description": "My first published software. An arcade style challenge game.",
+    "paragraphs": [
+      ""
     ],
-    links: {
-      "Boxscape on AppAdvice" : "https://appadvice.com/app/boxscape/1053771238",
+    "links": {
+      "Boxscape on AppAdvice" : "https://appadvice.com/app/boxscape/1053771238"
     }
   },
-  FluidSimulator: {
-    title: "Fluid Simulator",
-    year: "2021",
-    tags: ["Unity","Compute-Shader","Physics","Simulation"],
-    images: [
+  "FluidSimulator": {
+    "title": "Fluid Simulator",
+    "year": "2021",
+    "tags": ["Unity","Compute-Shader","Physics","Simulation"],
+    "images": [
       "img/FluidSimulator/img34567.png",
       "img/FluidSimulator/img84563.png"],
-    description: "Simulates liquid and gas in a 2D space. Made to test my ideas about a cellular physics simulator running on the GPU.",
-    paragraphs: [
-      "",
-    ],
+    "description": "Simulates liquid and gas in a 2D space. Made to test my ideas about a cellular physics simulator running on the GPU.",
+    "paragraphs": [
+      ""
+    ]
   },
-  Webgl: {
-    title: "WebGL Shaders",
-    year: "2019",
-    tags: ["WebGL","Fragment-Shader","Fractals"],
-    images: [
+  "Webgl": {
+    "title": "WebGL Shaders",
+    "year": "2019",
+    "tags": ["WebGL","Fragment-Shader","Fractals"],
+    "images": [
       "img/Webgl/img46357.png",
       "img/Webgl/img4582.png",
       "img/Webgl/img89376.png",
       "img/Webgl/img486784.png",
       "img/Webgl/img786378.png",
       "img/Webgl/img3785857.png"],
-    description: "Using knowledge of fragment shaders, explored mathematical concepts in web browser.",
-    paragraphs: [
-      "",
-    ],
+    "description": "Using knowledge of fragment shaders, explored mathematical concepts in web browser.",
+    "paragraphs": [
+      ""
+    ]
   },
-  PyconAUSydney: {
-    title: "Speaker at Pycon-AU",
-    year: "2018",
-    tags: ["Python","NOR","Sydney","Public-Event"],
-    images: [
+  "PyconAUSydney": {
+    "title": "Speaker at Pycon-AU",
+    "year": "2018",
+    "tags": ["Python","NOR","Sydney","Public-Event"],
+    "images": [
       "img/PyconAUSydney/IMG_6462.JPG",
       "img/PyconAUSydney/IMG_9029.JPG",
       "img/PyconAUSydney/IMG_0764.JPG"],
-    description: "I gave a talk at the national python convention to speak about my journey from learning python to creating my second iPad game “NOR”.",
-    paragraphs: [
-      "",
-    ],
+    "description": "I gave a talk at the national python convention to speak about my journey from learning python to creating my second iPad game “NOR”.",
+    "paragraphs": [
+      ""
+    ]
   },
-  STEMCongress: {
-    title: "STEM Aboriginal Student Congress",
-    year: "2018",
-    tags: ["STEM","Python","Public-Event"],
-    images: ["img/STEMCongress/img57463875.JPG"],
-    description: "Helped students from across the state to learn about software development. By the end the students had each made a basic IOS app using SpriteKit in Pythonista",
-    paragraphs: [
-      "",
-    ],
-  },
+  "STEMCongress": {
+    "title": "STEM Aboriginal Student Congress",
+    "year": "2018",
+    "tags": ["STEM","Python","Public-Event"],
+    "images": ["img/STEMCongress/img57463875.JPG"],
+    "description": "Helped students from across the state to learn about software development. By the end the students had each made a basic IOS app using SpriteKit in Pythonista",
+    "paragraphs": [
+      ""
+    ]
+  }
 }
