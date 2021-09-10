@@ -155,6 +155,11 @@
               </video>
             </div>
           </div>
+          <div v-for="frame in content.iframes" class="col">
+            <div class="card shadow-sm">
+              <iframe v-bind:src="frame" width="357px" height="268px" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
         </div>
       </div>
       <p v-for="text in content.paragraphs" class="bd" style="padding-top: 1rem">
