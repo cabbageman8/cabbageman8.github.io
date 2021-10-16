@@ -101,11 +101,17 @@ const contentList = {
     "title": "Fluid Simulator",
     "year": "2021",
     "tags": ["Unity","Compute-Shader","Physics","Simulation"],
+    "vids": [
+      "vids/356785_Trim.mp4"],
     "images": [
       "img/FluidSimulator/img34567.png",
-      "img/FluidSimulator/img84563.png"],
-      "vids": [
-        "vids/356785_Trim.mp4"],
+      "img/FluidSimulator/img84563.png",
+      "img/FluidSimulator/67846745.png",
+      "img/FluidSimulator/9864345.png",
+      "img/FluidSimulator/fero.gif",
+      "img/FluidSimulator/bucket.gif",
+      "img/FluidSimulator/galton_board.gif",
+      "img/FluidSimulator/hourglass.png",],
     "description": "Simulates liquid and gas in a 2D space. Made to test my ideas about a cellular physics simulator running on the GPU.",
     "paragraphs": [
       ""
