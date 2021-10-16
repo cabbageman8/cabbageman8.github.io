@@ -65,6 +65,43 @@ const contentList = {
       "RetroPSU" : "https://www.heldergametech.com/shop/gameboy-zero/retropsu"
     }
   },
+  "FluidSimulator": {
+    "title": "Fluid Simulator",
+    "year": "2021",
+    "tags": ["Unity","Compute-Shader","Physics","Simulation"],
+    "vids": [
+      "vids/356785_Trim.mp4"],
+    "images": [
+      "img/FluidSimulator/img34567.png",
+      "img/FluidSimulator/img84563.png",
+      "img/FluidSimulator/67846745.png",
+      "img/FluidSimulator/9864345.png",
+      "img/FluidSimulator/fero.gif",
+      "img/FluidSimulator/bucket.gif",
+      "img/FluidSimulator/galton_board.gif",
+      "img/FluidSimulator/hourglass.png",],
+    "description": "Simulates liquid and gas in a 2D space. Made to test my ideas about a cellular physics simulator running on the GPU.",
+    "paragraphs": [
+      ""
+    ]
+  },
+  "PyconAUSydney": {
+    "title": "Speaker at Pycon-AU",
+    "year": "2018",
+    "tags": ["Python","NOR","Sydney","Public-Event"],
+    "images": [
+      "img/PyconAUSydney/IMG_6462.JPG",
+      "img/PyconAUSydney/IMG_9029.JPG",
+      "img/PyconAUSydney/IMG_0764.JPG"],
+    "description": "I gave a talk at the national python convention to speak about my journey from learning python to creating my second iPad game “NOR”.",
+    "paragraphs": [
+      "After being accepted to speak, I flew to Sydney to attend PyconAU 2018 in the ICC. My talk was part of the Education Seminar Student Showcase, a group of eight talks by students from around the country."
+    ],
+    "links": {
+      "About NOR" : "https://cabbage.moe/#/Nor",
+      "Full Showcase Video" : "https://youtu.be/QNAgPjbn0Ws"
+    }
+  },
   "PythonistaWork": {
     "title": "IOS Development in Pythonista",
     "year": "2015-2018",
@@ -98,26 +135,6 @@ const contentList = {
       "Boxscape on AppAdvice" : "https://appadvice.com/app/boxscape/1053771238"
     }
   },
-  "FluidSimulator": {
-    "title": "Fluid Simulator",
-    "year": "2021",
-    "tags": ["Unity","Compute-Shader","Physics","Simulation"],
-    "vids": [
-      "vids/356785_Trim.mp4"],
-    "images": [
-      "img/FluidSimulator/img34567.png",
-      "img/FluidSimulator/img84563.png",
-      "img/FluidSimulator/67846745.png",
-      "img/FluidSimulator/9864345.png",
-      "img/FluidSimulator/fero.gif",
-      "img/FluidSimulator/bucket.gif",
-      "img/FluidSimulator/galton_board.gif",
-      "img/FluidSimulator/hourglass.png",],
-    "description": "Simulates liquid and gas in a 2D space. Made to test my ideas about a cellular physics simulator running on the GPU.",
-    "paragraphs": [
-      ""
-    ]
-  },
   "Webgl": {
     "title": "WebGL Shaders",
     "year": "2019",
@@ -133,23 +150,6 @@ const contentList = {
     "paragraphs": [
       ""
     ]
-  },
-  "PyconAUSydney": {
-    "title": "Speaker at Pycon-AU",
-    "year": "2018",
-    "tags": ["Python","NOR","Sydney","Public-Event"],
-    "images": [
-      "img/PyconAUSydney/IMG_6462.JPG",
-      "img/PyconAUSydney/IMG_9029.JPG",
-      "img/PyconAUSydney/IMG_0764.JPG"],
-    "description": "I gave a talk at the national python convention to speak about my journey from learning python to creating my second iPad game “NOR”.",
-    "paragraphs": [
-      "After being accepted to speak, I flew to Sydney to attend PyconAU 2018 in the ICC. My talk was part of the Education Seminar Student Showcase, a group of eight talks by students from around the country."
-    ],
-    "links": {
-      "About NOR" : "https://cabbage.moe/#/Nor",
-      "Full Showcase Video" : "https://youtu.be/QNAgPjbn0Ws"
-    }
   },
   "STEMCongress": {
     "title": "STEM Aboriginal Student Congress",
