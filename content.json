@@ -144,7 +144,11 @@ const contentList = {
     "description": "I gave a talk at the national python convention to speak about my journey from learning python to creating my second iPad game “NOR”.",
     "paragraphs": [
       "After being accepted to speak, I flew to Sydney to attend PyconAU 2018 in the ICC. My talk was part of the Education Seminar Student Showcase, a group of eight talks by students from around the country."
-    ]
+    ],
+    "links": {
+      "About NOR" : "https://cabbage.moe/#/Nor",
+      "Full Showcase Video" : "https://youtu.be/QNAgPjbn0Ws"
+    }
   },
   "STEMCongress": {
     "title": "STEM Aboriginal Student Congress",
