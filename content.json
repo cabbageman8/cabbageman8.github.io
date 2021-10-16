@@ -90,7 +90,8 @@ const contentList = {
       "img/Boxscape/75484560bb.jpeg"],
     "description": "My first published software. An arcade style challenge game.",
     "paragraphs": [
-      ""
+      "This game used exclusively 'basic drawing' which involved writing shapes to the screen every frame. The shapes used were rectangles and ellipses.",
+      "Boxscape used the Pickle module to store persistent data, such as the amount of coins collected and which player characters have been unlocked."
     ],
     "links": {
       "Boxscape on AppAdvice" : "https://appadvice.com/app/boxscape/1053771238"
@@ -103,6 +104,8 @@ const contentList = {
     "images": [
       "img/FluidSimulator/img34567.png",
       "img/FluidSimulator/img84563.png"],
+      "vids": [
+        "vids/356785_Trim.mp4"],
     "description": "Simulates liquid and gas in a 2D space. Made to test my ideas about a cellular physics simulator running on the GPU.",
     "paragraphs": [
       ""
@@ -134,7 +137,7 @@ const contentList = {
       "img/PyconAUSydney/IMG_0764.JPG"],
     "description": "I gave a talk at the national python convention to speak about my journey from learning python to creating my second iPad game “NOR”.",
     "paragraphs": [
-      ""
+      "After being accepted to speak, I flew to Sydney to attend PyconAU 2018 in the ICC. My talk was part of the Education Seminar Student Showcase, a group of eight talks by students from around the country."
     ]
   },
   "STEMCongress": {
