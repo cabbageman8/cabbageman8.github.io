@@ -51,7 +51,8 @@ const contentList = {
       "img/InsectBox/IMG_1131.JPG",
       "img/InsectBox/IMG_1130.JPG",
       "img/InsectBox/img3456.png",
-      "img/InsectBox/img9.jpeg"],
+      "img/InsectBox/img9.jpeg",
+      "img/InsectBox/image0.jpg"],
     "description": "RFID based interactive where a range of insect specimens can be scanned in order to simulate how they compete with each other in an ecosystem.",
     "paragraphs": [
       "The project was contained in a stand-alone box with a battery, display, buttons, RFID scanner and specimens. This allowed the box to function as a traveling interactive for school visits.",
@@ -68,7 +69,7 @@ const contentList = {
     "title": "IOS Development in Pythonista",
     "year": "2015-2018",
     "tags": ["Python","iPad","Pythonista"],
-    "images": ["img/PythonistaWork/IMG_7481.PNG"],
+    "images": ["img/PythonistaWork/IMG_7482.PNG"],
     "vids": [
       "vids/IMG_6911.TRIM.MOV",
       "vids/IMG_6899.TRIM.MOV",
