@@ -16,7 +16,8 @@ const contentList = {
       "This game is still in development. It will feature a sandbox world, with multiplayer gameplay centered around exploration, agriculture, and cooking."
     ],
     "links": {
-      "Check it out on Github" : "https://github.com/cabbageman8/NitrogenGame"
+      "Check it out on Github" : "https://github.com/cabbageman8/NitrogenGame",
+      "Download latest version as zip" : "https://github.com/cabbageman8/NitrogenGame/archive/refs/heads/main.zip"
     }
   },
   "BeeEcology": {
