@@ -4,6 +4,9 @@ const contentList = {
     "year": "2022",
     "tags": ["Python","Pygame","OpenGL"],
     "images": [
+      "img/Nitrogen/screenshot1648443946.png",
+      "img/Nitrogen/screenshot1648444362.png",
+      "img/Nitrogen/screenshot1648445290.png",
       "img/Nitrogen/87224768963.png",
       "img/Nitrogen/98463564252.png",
       "img/Nitrogen/127894648986.png",
