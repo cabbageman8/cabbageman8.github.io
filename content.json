@@ -9,14 +9,10 @@ const contentList = {
       "img/Nitrogen/screenshot1652277816.png",
       "img/Nitrogen/screenshot1648443946.png",
       "img/Nitrogen/screenshot1648444362.png",
-      "img/Nitrogen/screenshot1648445290.png",
-      "img/Nitrogen/87224768963.png",
-      "img/Nitrogen/98463564252.png",
-      "img/Nitrogen/127894648986.png",
-      "img/Nitrogen/54384894456.png",
-      "img/Nitrogen/8946353452.png",
-      "img/Nitrogen/684863456453.png",
-      "img/Nitrogen/45624286458645.png"],
+      "img/Nitrogen/screenshot1648445290.png"],
+      "iframes": [
+        "https://www.youtube.com/embed/RdIiOV1sdV8",
+        "https://www.youtube.com/embed/CnsIJXM0Md0"],
     "description": "A topdown multiplayer survival game. It will feature a sandbox world, with multiplayer gameplay centered around exploration, agriculture, and cooking.",
     "paragraphs": [
       "This game is still in development. It will feature a sandbox world, with multiplayer gameplay centered around exploration, agriculture, and cooking."
@@ -59,8 +55,8 @@ const contentList = {
       "img/nor/IMG_7010.PNG",
       "img/nor/IMG_7009.PNG",
       "img/nor/IMG_7016.PNG"],
-      "iframes": [
-        "https://www.youtube.com/embed/WuY-R9KFgMg"],
+    "iframes": [
+      "https://www.youtube.com/embed/WuY-R9KFgMg"],
     "description": "A 2D sandbox puzzle game for iPad. It features computer generated landscapes, full terrain editing, computer generated logic puzzles and infinite levels.",
     "paragraphs": [
       "The game used advanced features such as vector graphics, procedural generation, RW bitmap objects, and OpenGL shaders. The player could move freely around a 2D world. Each zone in this world has distinct sky, rock, and flora. The flora included procedurally generated bushes, trees, and grass. The world could be edited by the player using a creative menu; where rock can be created or destroyed as the player desires. Each zone may be blocked by a logic puzzle based on real world electronic wiring, and once the player made the correct circuit, the player could access new zones."
