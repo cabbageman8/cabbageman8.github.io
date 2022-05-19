@@ -12,7 +12,8 @@ const contentList = {
       "img/Nitrogen/screenshot1648445290.png"],
       "iframes": [
         "https://www.youtube.com/embed/RdIiOV1sdV8",
-        "https://www.youtube.com/embed/CnsIJXM0Md0"],
+        "https://www.youtube.com/embed/CnsIJXM0Md0",
+        "https://www.youtube.com/embed/lcVZ34A1eII"],
     "description": "A topdown multiplayer survival game. It will feature a sandbox world, with multiplayer gameplay centered around exploration, agriculture, and cooking.",
     "paragraphs": [
       "Built upon my custom made game engine, Nitrogen pushes Python game development to it limits. Pairing procedural generation with hardware accelerated graphics, Nitrogen features a 2.5D infinite world with climate-driven ecosystems.",
