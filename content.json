@@ -11,10 +11,10 @@ const contentList = {
       ["img/Nitrogen/screenshot1658391789.png"],
       ["img/Nitrogen/screenshot1658391836.png"]],
       "iframes": [
-        "https://www.youtube.com/embed/RdIiOV1sdV8",
-        "https://www.youtube.com/embed/rcvYkm93KPk",
-        "https://www.youtube.com/embed/lcVZ34A1eII"],
-    "description": "A topdown multiplayer survival game. It will feature a sandbox world, with multiplayer gameplay centered around exploration, agriculture, and cooking.",
+        ["https://www.youtube.com/embed/RdIiOV1sdV8"],
+        ["https://www.youtube.com/embed/rcvYkm93KPk", "Random walk around different biomes showing off the new upgraded textures."],
+        ["https://www.youtube.com/embed/lcVZ34A1eII"]],
+    "description": "A topdown multiplayer survival game. Currently in alpha, Nitrogen features a sandbox world with gameplay centered around exploration, agriculture, and cooking.",
     "paragraphs": [
       "Built upon my custom made game engine, Nitrogen pushes Python game development to it limits. Pairing procedural generation with hardware accelerated graphics, Nitrogen features a 2.5D infinite world with climate-driven ecosystems.",
       "The world generation simulates temperature, water availability, and salinity in order to determine what plants will grown in any location.",
@@ -55,13 +55,13 @@ const contentList = {
     "vids": [
       "vids/356785_Trim.mp4"],
     "images": [
-      ["img/FluidSimulator/img34567.png", "Pouring liquid from a teapot results in a flow due to momentum and gravity"],
-      ["img/FluidSimulator/img84563.png", "After exiting the pot, the liquid creates a vapor pressure which fills the room"],
+      ["img/FluidSimulator/img34567.png", "Pouring liquid from a teapot results in a flow due to momentum and gravity."],
+      ["img/FluidSimulator/img84563.png", "After exiting the pot, the liquid creates a vapor pressure which fills the room."],
       ["img/FluidSimulator/67846745.png"],
       ["img/FluidSimulator/9864345.png"],
-      ["img/FluidSimulator/fero.gif", "Ferofluid interacting with a bar magnet"],
+      ["img/FluidSimulator/fero.gif", "Ferofluid interacting with a bar magnet."],
       ["img/FluidSimulator/bucket.gif"],
-      ["img/FluidSimulator/galton_board.gif", "Galton board example shows probabilistic behaviour in a determonistic simulation"],
+      ["img/FluidSimulator/galton_board.gif", "Galton board example shows probabilistic behaviour in a determonistic simulation."],
       ["img/FluidSimulator/hourglass.png"],
       ],
     "description": "Simulates liquid and gas in a 2D space. Made to test my ideas about a cellular physics simulator running on the GPU.",
@@ -83,7 +83,7 @@ const contentList = {
       ["img/nor/IMG_7009.PNG"],
       ["img/nor/IMG_7016.PNG"]],
     "iframes": [
-      "https://www.youtube.com/embed/WuY-R9KFgMg"],
+      ["https://www.youtube.com/embed/WuY-R9KFgMg"]],
     "description": "A 2D sandbox puzzle game for iPad. It features computer generated landscapes, full terrain editing, computer generated logic puzzles and infinite levels.",
     "paragraphs": [
       "The game used advanced features such as vector graphics, procedural generation, RW bitmap objects, and OpenGL shaders. The player could move freely around a 2D world. Each zone in this world has distinct sky, rock, and flora. The flora included procedurally generated bushes, trees, and grass. The world could be edited by the player using a creative menu; where rock can be created or destroyed as the player desires. Each zone may be blocked by a logic puzzle based on real world electronic wiring, and once the player made the correct circuit, the player could access new zones."
