@@ -28,7 +28,7 @@ let aVertexPosition;
 let previousTime = 0.0;
 let degreesPerSecond = 90.0;
 
-window.addEventListener("load", startup, false);
+//window.addEventListener("load", startup, false);
 
 function resize(canvas) {
   var realToCSSPixels = window.devicePixelRatio;
@@ -173,3 +173,5 @@ function animateScene() {
     animateScene();
   });
 }
+
+startup();
