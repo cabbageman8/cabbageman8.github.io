@@ -71,7 +71,7 @@
           <div v-for="key in Object.keys(contentList)" class="col" :set="articleLength = Math.ceil((contentList[key].paragraphs.join(' ').split(' ').length+contentList[key].description.split(' ').length)/50)">
             <router-link v-bind:to="key" class="dropdown-item" style="white-space: normal; margin: 0; padding: 1px; border: 0; border-radius: 3px">
               <div class="card shadow-sm">
-                <img v-bind:src="contentList[key].images[0]" class="card-img-top" width="100%" focusable="false" loading="lazy">
+                <img v-bind:src="contentList[key].images[0][0]" class="card-img-top" width="100%" focusable="false" loading="lazy">
                 <div class="card-body">
                   <h2>{{contentList[key].title}}</h2>
                   <span class="bd">
