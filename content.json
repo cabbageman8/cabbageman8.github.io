@@ -2,17 +2,17 @@ const contentList = {
   "Nitrogen": {
     "title": "Nitrogen",
     "year": "2022",
-    "tags": ["Python","Pygame","OpenGL"],
+    "tags": ["Python","Pygame","ModernGL"],
     "images": [
-      "img/Nitrogen/screenshot1652277080.png",
-      "img/Nitrogen/screenshot1652277799.png",
-      "img/Nitrogen/screenshot1652277816.png",
-      "img/Nitrogen/screenshot1648443946.png",
-      "img/Nitrogen/screenshot1648444362.png",
-      "img/Nitrogen/screenshot1648445290.png"],
+      "img/Nitrogen/screenshot1658382214.png",
+      "img/Nitrogen/screenshot1658391619.png",
+      "img/Nitrogen/screenshot1658391648.png",
+      "img/Nitrogen/screenshot1658404020.png",
+      "img/Nitrogen/screenshot1658391789.png",
+      "img/Nitrogen/screenshot1658391836.png"],
       "iframes": [
         "https://www.youtube.com/embed/RdIiOV1sdV8",
-        "https://www.youtube.com/embed/CnsIJXM0Md0",
+        "https://www.youtube.com/embed/rcvYkm93KPk",
         "https://www.youtube.com/embed/lcVZ34A1eII"],
     "description": "A topdown multiplayer survival game. It will feature a sandbox world, with multiplayer gameplay centered around exploration, agriculture, and cooking.",
     "paragraphs": [
