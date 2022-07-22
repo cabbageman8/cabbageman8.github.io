@@ -302,28 +302,6 @@
   }
 </script>
 <script async src="https://api.countapi.xyz/hit/cabbage.moe/visitors?callback=cb"></script>
-<script>
-  const router = new VueRouter({
-    routes: [
-      { path: '/AboutMe', component: {data() {return {visitcount}}, template: '#AboutMe'} },
-      { path: '/Nitrogen', component: {data() {return {content: contentList["Nitrogen"]}}, template: '#normalPage'}},
-      { path: '/BeeEcology', component: {data() {return {content: contentList["BeeEcology"]}}, template: '#normalPage'}},
-      { path: '/Nor', component: {data() {return {content: contentList["Nor"]}}, template: '#normalPage'}},
-      { path: '/InsectBox', component: {data() {return {content: contentList["InsectBox"]}}, template: '#normalPage'}},
-      { path: '/PythonistaWork', component: {data() {return {content: contentList["PythonistaWork"]}}, template: '#normalPage'}},
-      { path: '/Boxscape', component: {data() {return {content: contentList["Boxscape"]}}, template: '#normalPage'}},
-      { path: '/FluidSimulator', component: {data() {return {content: contentList["FluidSimulator"]}}, template: '#normalPage'}},
-      { path: '/Webgl', component: {data() {return {content: contentList["Webgl"]}}, template: '#normalPage'}},
-      { path: '/PyconAUSydney', component: {data() {return {content: contentList["PyconAUSydney"]}}, template: '#normalPage'}},
-      { path: '/STEMCongress', component: {data() {return {content: contentList["STEMCongress"]}}, template: '#normalPage'}},
-      { path: '*', component: {data() {return {contentList}}, template: '#home'} },
-    ]
-  })
-
-  const vueapp = new Vue({
-    router
-  }).$mount('#vueapp')
-</script>
 
 <script id="vertex-shader" type="x-shader/x-vertex">
   attribute vec2 aVertexPosition;
@@ -359,5 +337,28 @@
     gl_FragColor = vec4(color.r,min(color.g, 0.8),color.b,1.0);
   }
 </script>
-<script  src="glsetup.js"></script>
+<script async src="glsetup.js"></script>
 </html>
+
+<script>
+  const router = new VueRouter({
+    routes: [
+      { path: '/AboutMe', component: {data() {return {visitcount}}, template: '#AboutMe'} },
+      { path: '/Nitrogen', component: {data() {return {content: contentList["Nitrogen"]}}, template: '#normalPage'}},
+      { path: '/BeeEcology', component: {data() {return {content: contentList["BeeEcology"]}}, template: '#normalPage'}},
+      { path: '/Nor', component: {data() {return {content: contentList["Nor"]}}, template: '#normalPage'}},
+      { path: '/InsectBox', component: {data() {return {content: contentList["InsectBox"]}}, template: '#normalPage'}},
+      { path: '/PythonistaWork', component: {data() {return {content: contentList["PythonistaWork"]}}, template: '#normalPage'}},
+      { path: '/Boxscape', component: {data() {return {content: contentList["Boxscape"]}}, template: '#normalPage'}},
+      { path: '/FluidSimulator', component: {data() {return {content: contentList["FluidSimulator"]}}, template: '#normalPage'}},
+      { path: '/Webgl', component: {data() {return {content: contentList["Webgl"]}}, template: '#normalPage'}},
+      { path: '/PyconAUSydney', component: {data() {return {content: contentList["PyconAUSydney"]}}, template: '#normalPage'}},
+      { path: '/STEMCongress', component: {data() {return {content: contentList["STEMCongress"]}}, template: '#normalPage'}},
+      { path: '*', component: {data() {return {contentList}}, template: '#home'} },
+    ]
+  })
+
+  const vueapp = new Vue({
+    router
+  }).$mount('#vueapp')
+</script>
