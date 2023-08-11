@@ -38,14 +38,15 @@ const contentList = {
       ["img/Bee/DSC_0233.JPG"]],
     "description": "Interactive shows the effects of the recent Australian fires on the endangered green carpenter bee. This bee only lives on a tiny island called kangaroo island, where most of its habitat was burned in early 2020.",
     "paragraphs": [
-      "In a team with SA Museum scientist Remko Leijs and the lead designer, I created an ecosystem simulator demonstrating the effect of bushfire on native bees. I created the simulation using python and used algorithms to model 25 years worth of data. Working with a scientist allowed the simulation to be reasonably accurate. The final simulator was in the SA Museum foyer for 6 months and is subsequently used by Remko Leijs for public demonstrations. ",
+      "In a team with South Australian Museum scientist Remko Leijs and the lead designer, I created an ecosystem simulator demonstrating the effect of bushfire on native bees. I created the simulation using Python and used algorithms to model 25 years worth of data. Working with a scientist allowed the simulation to be reasonably accurate. The final simulator was in the SA Museum foyer for 6 months and is subsequently used by Remko Leijs for public demonstrations. ",
       "The system was entirely coded in Python and used custom http net code to send simulation data from a touch screen computer (where the user controls the simulation) to a second 4K screen computer over internal wifi.",
       "When making the software, I had to solve lots of interesting problems, often requiring the implementation of a custom data structure or algorithm. For example, the simulation used a “Z-order” data structure to store geographic information. The data about each 9 hectare tile (fire history, terrain types, etc) was stored in an object and the Z-order map placed the tiles in a 32x32 grid (9216 hectares total). ",
       "The simulation used mathematical models to determine how the tiles evolve over time and how they interact with each other. These algorithmic models were created based on scientific data and a body of research going back 25 years. The simulation starts at 2007 and allows the user to simulate the 2020 fire according to satellite imagery, and simulate an additional 30 years into the future. The time steps in the simulation were 1/8 of a year so that each tile could be updated twice per season. Therefor over the course of the 43 year simulation 2007-2050, the 1024 tiles would receive 344 updates, each doing complex calculations according to multiple factors and each effecting the tiles around it. ",
       "In order to create the Z-order map for 2007 (the terrain which every user starts with), I used the mathematical models from the simulator. I made a second program which takes png images of fire history and terrain data as input (The fire history map had data going back 50 years) and using these inputs the program simulated the history of the terrain in order to get accurate starting data for all the unknown parameters in the map."
     ],
     "links": {
-      "Wheen Bee Foundation" : "https://www.wheenbeefoundation.org.au/news-events/buzz/bee-ecology-exhibition"
+      "Wheen Bee Foundation" : "https://www.wheenbeefoundation.org.au/news-events/buzz/bee-ecology-exhibition",
+      "(Archived) South Australian Museum" : "https://web.archive.org/web/20210228070420/https://www.samuseum.sa.gov.au/event/green-carpenter-bee"
     }
   },
   "FluidSimulator": {
