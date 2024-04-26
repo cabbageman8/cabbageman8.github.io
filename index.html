@@ -110,8 +110,8 @@
       </p>
       <h3>Skills Summary</h3>
       <ul>
-        <li>Experienced in: Python, C++, Javascript, HTML, OpenGL.</li>
-        <li>I have also used: Java, SQL, Swift, MPI, OpenCL, HLSL, C, C#.</li>
+        <li>Experienced in: Python, C++, Java, Docker, OpenGL.</li>
+        <li>I have also used: Javascript, HTML, OpenCL, C.</li>
       </ul>
       <h3>Education</h3>
       <ul>
@@ -119,13 +119,13 @@
       </ul>
       <h3>Contact</h3>
       <ul>
-        <li>Discord: cabbageman#7128</li>
+        <li>Discord: cabbageman_</li>
         <li>Github: <a href="https://github.com/cabbageman8" target="_blank">cabbageman8</a></li>
-        <li>Email: <a href="mailto: cabbagebot@icloud.com" target="_blank">cabbagebot@icloud.com</a></li>
+        <li>Email: <a href="mailto: 0xcabb@gmail.com" target="_blank">0xcabb@gmail.com</a></li>
       </ul>
       <h3>Site Info</h3>
       <ul>
-        <li>cabbage.moe is hosted on Github :
+        <li>cabbage.moe is hosted open-source on Github :
           <a href="https://github.com/cabbageman8/cabbageman8.github.io" target="_blank">
             cabbageman8/cabbageman8.github.io
           </a>
@@ -225,6 +225,7 @@
                   Python
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><router-link to="/PhysicalAudio" class="dropdown-item">Physical Audio</router-link></li>
                   <li><router-link to="/BeeEcology" class="dropdown-item">Bee Ecology</router-link></li>
                   <li><router-link to="/Nitrogen" class="dropdown-item">Nitrogen</router-link></li>
                   <li><router-link to="/NOR" class="dropdown-item">NOR</router-link></li>
@@ -335,9 +336,10 @@
 <script>
   const router = new VueRouter({
     routes: [
-      { path: '/AboutMe', component: {data() {return {visitcount}}, template: '#AboutMe'} },
+      { path: '/AboutMe', component: {data() {return {}}, template: '#AboutMe'} },
       { path: '/Nitrogen', component: {data() {return {content: contentList["Nitrogen"]}}, template: '#normalPage'}},
       { path: '/BeeEcology', component: {data() {return {content: contentList["BeeEcology"]}}, template: '#normalPage'}},
+      { path: '/PhysicalAudio', component: {data() {return {content: contentList["PhysicalAudio"]}}, template: '#normalPage'}},
       { path: '/Nor', component: {data() {return {content: contentList["Nor"]}}, template: '#normalPage'}},
       { path: '/InsectBox', component: {data() {return {content: contentList["InsectBox"]}}, template: '#normalPage'}},
       { path: '/PythonistaWork', component: {data() {return {content: contentList["PythonistaWork"]}}, template: '#normalPage'}},

@@ -49,6 +49,27 @@ const contentList = {
       "(Archived) South Australian Museum" : "https://web.archive.org/web/20210228070420/https://www.samuseum.sa.gov.au/event/green-carpenter-bee"
     }
   },
+  "PhysicalAudio": {
+    "title": "Physical Audio",
+    "year": "2023",
+    "tags": ["Python","Pygame","Numpy","Simulation"],
+    "images": [
+      ["img/PhysicalAudio/4523185498456.png"]],
+    "vids": [
+      "vids/2157745245_Trim.mp4",
+      "vids/57415416523189.mp4"],
+    "description": "An audio generator tool attached to custom physics simulations.",
+    "paragraphs": [
+      "Originally planned as an audio engine for Nitrogen, the simulator quickly became a project in its own right.",
+      "Using Pyaudio, PCM data is created and sent to the DAC in real-time, allowing for interactive live synthesis of sound.",
+      "The main script implements base audio playback functionality such that the physics simulations can be encapsulated within their own scrips and then imported.",
+      "The string simulation handles tension, mass, momentum, air resistance, and contains an algorithm to automatically tune these parameters so that the notes are musically correct.",
+      "Audio is generated at 16000Hz, placing a hard requirement on the speed of the simulation. The physics is calculated 16 thousand times per second using Numpy such that many strings can be simulated in parallel using hardware acceleration.",
+    ],
+    "links": {
+      "Check it out on Github" : "https://github.com/cabbageman8/PhysicalAudio"
+    }
+  },
   "FluidSimulator": {
     "title": "Fluid Simulator",
     "year": "2021",
