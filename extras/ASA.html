@@ -94,12 +94,14 @@
             
             function shuffle() {
                 shuffleHelper(ActionOrder)
-                for (let i = 0; i < ActionOrder.length; i++) {
+                
+                let tempArr = ActionOrder.slice(0, Number(NumActions.value)+1)
+                console.log("tempArr", tempArr)
+                shuffleHelper(tempArr)
+                for (let i = 0; i < Number(ActionOrder.length); i++) {
                     ActionIsThrust[i] = ActionOrder[i]
                 }
-                let tempArr = ActionOrder.slice(0, NumActions)
-                shuffleHelper(tempArr)
-                for (let i = 0; i < NumActions; i++) {
+                for (let i = 0; i < Number(NumActions.value)+1; i++) {
                     ActionIsThrust[i] = tempArr[i]
                 }
             }
