@@ -13,11 +13,12 @@ const contentList = {
       ["img/Nitrogen/screenshot1685686320.png", "The world is effectively infinite, here is a section rendered at a scale of 1 tile per pixel."]],
       "iframes": [
         ["https://www.youtube.com/embed/rcvYkm93KPk", "Random walk around different biomes showing off the new upgraded textures."],
-        ["https://www.youtube.com/embed/lcVZ34A1eII"]],
+        ["https://www.youtube.com/embed/929AJt2OSo0"]],
     "description": "A topdown multiplayer survival game. Currently in alpha, Nitrogen features a sandbox world with gameplay centered around exploration, agriculture, and cooking.",
     "paragraphs": [
       "Built upon my custom made game engine, Nitrogen pushes Python game development to it limits. Pairing procedural generation with hardware accelerated graphics, Nitrogen features a 2.5D infinite world with climate-driven ecosystems.",
       "The world generation simulates temperature, water availability, and salinity in order to determine which plants will grow in any location.",
+      "Featuring beautiful music created and owned by tottomori.",
       "Many of the plant textures are derivative of XfrogPlants wonderful 3d model libraries, created by botanical experts.",
     ],
     "links": {
