@@ -331,9 +331,6 @@
 </html>
 
 <script type="module">
-  import * as glsetup from "./glsetup.js";
-  glsetup.startup();
-  
   import contentList from './content.json' with { type: "json" };
   
   const router = new VueRouter({
@@ -357,4 +354,7 @@
   const vueapp = new Vue({
     router
   }).$mount('#vueapp')
+
+  import * as glsetup from "./glsetup.js";
+  glsetup.startup();
 </script>
