@@ -24,6 +24,8 @@ let uScalingFactor;
 let uGlobalColor;
 let uRotationVector;
 let aVertexPosition;
+let utime;
+let uresolution;
 
 // Animation timing
 
