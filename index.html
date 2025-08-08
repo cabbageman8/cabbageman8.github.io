@@ -12,9 +12,7 @@
   <!-- vue -->
   <script src="https://unpkg.com/vue@2/dist/vue.min.js"></script>
   <script src="https://unpkg.com/vue-router@2/dist/vue-router.js"></script>
-
-  <script src="content.json"></script>
-
+  
   <style>
   @font-face {
     font-family: 'Ubuntu_Mono';
@@ -334,6 +332,7 @@
 </html>
 
 <script>
+  import contentList from './content.json' assert { type: 'json' };
   const router = new VueRouter({
     routes: [
       { path: '/AboutMe', component: {data() {return {}}, template: '#AboutMe'} },

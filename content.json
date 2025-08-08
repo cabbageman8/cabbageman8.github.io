@@ -1,4 +1,4 @@
-const contentList = {
+{
   "Nitrogen": {
     "title": "Nitrogen",
     "year": "2022",
@@ -19,7 +19,7 @@ const contentList = {
       "Built upon my custom made game engine, Nitrogen pushes Python game development to it limits. Pairing procedural generation with hardware accelerated graphics, Nitrogen features a 2.5D infinite world with climate-driven ecosystems.",
       "The world generation simulates temperature, water availability, and salinity in order to determine which plants will grow in any location.",
       "Featuring beautiful music created and owned by tottomori.",
-      "Many of the plant textures are derivative of XfrogPlants wonderful 3d model libraries, created by botanical experts.",
+      "Many of the plant textures are derivative of XfrogPlants wonderful 3d model libraries, created by botanical experts."
     ],
     "links": {
       "Check it out on Github" : "https://github.com/cabbageman8/NitrogenGame",
@@ -65,7 +65,7 @@ const contentList = {
       "Using Pyaudio, PCM data is created and sent to the DAC in real-time, allowing for interactive live synthesis of sound.",
       "The main script implements base audio playback functionality such that the physics simulations can be encapsulated within their own scrips and then imported.",
       "The string simulation handles tension, mass, momentum, air resistance, and contains an algorithm to automatically tune these parameters so that the notes are musically correct.",
-      "Audio is generated at 16000Hz, placing a hard requirement on the speed of the simulation. The physics is calculated 16 thousand times per second using Numpy such that many strings can be simulated in parallel using hardware acceleration.",
+      "Audio is generated at 16000Hz, placing a hard requirement on the speed of the simulation. The physics is calculated 16 thousand times per second using Numpy such that many strings can be simulated in parallel using hardware acceleration."
     ],
     "links": {
       "Check it out on Github" : "https://github.com/cabbageman8/PhysicalAudio"
@@ -85,7 +85,7 @@ const contentList = {
       ["img/FluidSimulator/fero.gif", "Ferofluid interacting with a bar magnet."],
       ["img/FluidSimulator/bucket.gif"],
       ["img/FluidSimulator/galton_board.gif", "Galton board example shows probabilistic behaviour in a determonistic simulation."],
-      ["img/FluidSimulator/hourglass.png"],
+      ["img/FluidSimulator/hourglass.png"]
       ],
     "description": "Simulates liquid and gas in a 2D space. Made to test my ideas about a cellular physics simulator running on the GPU.",
     "paragraphs": [
