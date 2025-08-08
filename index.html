@@ -331,8 +331,11 @@
 </html>
 
 <script type="module">
+  import * as glsetup from "./glsetup.js";
+  glsetup.startup();
+  
   import contentList from './content.json' with { type: "json" };
-  import "./glsetup.js";
+  
   const router = new VueRouter({
     routes: [
       { path: '/AboutMe', component: {data() {return {}}, template: '#AboutMe'} },

@@ -177,5 +177,3 @@ function animateScene() {
     animateScene();
   });
 }
-
-startup();
