@@ -30,6 +30,10 @@ let aVertexPosition;
 let previousTime = 0.0;
 let degreesPerSecond = 90.0;
 
+let currentAngle = 0.0;
+let rotationRate = 1;
+let time = 0.0;
+
 //window.addEventListener("load", startup, false);
 
 function resize(canvas) {
@@ -83,10 +87,6 @@ function startup() {
 
   vertexNumComponents = 2;
   vertexCount = vertexArray.length/vertexNumComponents;
-
-  currentAngle = 0.0;
-  rotationRate = 1;
-  time = 0.0;
 
   animateScene();
 }
