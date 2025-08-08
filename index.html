@@ -328,11 +328,11 @@
     gl_FragColor = vec4(color.r,min(color.g, 0.8),color.b,1.0);
   }
 </script>
-<script async src="glsetup.js"></script>
 </html>
 
 <script type="module">
   import contentList from './content.json' with { type: "json" };
+  import "./glsetup.js";
   const router = new VueRouter({
     routes: [
       { path: '/AboutMe', component: {data() {return {}}, template: '#AboutMe'} },
