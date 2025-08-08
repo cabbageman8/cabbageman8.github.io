@@ -54,6 +54,7 @@ function resize(canvas) {
 }
 
 export function startup() {
+  console.log("in startup");
   glCanvas = document.getElementById("glcanvas");
   gl = glCanvas.getContext("webgl");
 
@@ -129,6 +130,7 @@ function compileShader(id, type) {
 }
 
 export function animateScene() {
+  console.log("in animateScene");
   resize(gl.canvas);
   gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
   currentScale = [1.0, glCanvas.width/glCanvas.height];
