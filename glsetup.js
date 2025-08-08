@@ -1,6 +1,8 @@
 let gl = null;
 let glCanvas = null;
 
+let shaderProgram;
+
 // Aspect ratio and coordinate system
 // details
 
