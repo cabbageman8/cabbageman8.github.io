@@ -331,8 +331,8 @@
 <script async src="glsetup.js"></script>
 </html>
 
-<script>
-  import contentList from './content.json' assert { type: 'json' };
+<script type="module">
+  import contentList from './content.json' with { type: "json" };
   const router = new VueRouter({
     routes: [
       { path: '/AboutMe', component: {data() {return {}}, template: '#AboutMe'} },
