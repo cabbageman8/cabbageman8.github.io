@@ -58,36 +58,43 @@
     <main>
       <section class="py-5 text-center container">
         <div class="row py-lg-5">
-          <div class="col-lg-6 col-md-8 mx-auto">
+          <div v-if="(!$route.query.tag)" class="col-lg-6 col-md-8 mx-auto">
             <h1 class="fw-light">Hello</h1>
             <p class="text-muted" style="font-size: 1.5rem; font-family: 'Ubuntu_Mono';">I'm Jasper Chandler, a professional software engineer in Adelaide, Australia. This is a showcase of my personal projects.</p>
+          </div>
+          <div v-else class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">#{{this.$route.query.tag}}</h1>
+            <p class="text-muted" style="font-size: 1.5rem; font-family: 'Ubuntu_Mono';">Showing projects tagged with {{this.$route.query.tag}}. <router-link to="/">Show All</router-link></p>
           </div>
         </div>
       </section>
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          <div v-for="key in Object.keys(contentList)" class="col" :set="articleLength = Math.ceil((contentList[key].paragraphs.join(' ').split(' ').length+contentList[key].description.split(' ').length)/50)">
-            <router-link v-bind:to="key" class="dropdown-item" style="white-space: normal; margin: 0; padding: 1px; border: 0; border-radius: 3px">
-              <div class="card shadow-sm">
-                <img v-bind:src="contentList[key].images[0][0]" class="card-img-top" width="100%" focusable="false" loading="lazy">
-                <div class="card-body">
-                  <h2>{{contentList[key].title}}</h2>
-                  <span class="bd">
-                    {{contentList[key].year}}
-                  </span>
-                  <span v-for="tag in contentList[key].tags" class="bd">
-                    #{{tag}}
-                  </span>
-                  <p class="card-text" style="margin-top:.5rem">{{contentList[key].description}}</p>
-                  <svg height="2em" width="100%" version="1.1" viewBox="0,0,1000,100">
-                    <path style="fill:none; opacity: 1; stroke:white; stroke-width:5" v-bind:d="'M10,50L990,50'"/>
-                    <g v-for="i in articleLength" style="fill:none; opacity: 1; stroke:white; stroke-width:5">
-                      <path v-bind:d="'M'+(425-50*articleLength+100*i)+',10L'+(425-50*articleLength+50+100*i)+',90'"/>
-                    </g>
-                  </svg>
+          <div v-for="key in Object.keys(contentList).filter(function(val){return (!$route.query.tag) || contentList[val].tags.includes($route.query.tag)})" 
+          class="col" :set="articleLength = Math.ceil((contentList[key].paragraphs.join(' ').split(' ').length+contentList[key].description.split(' ').length)/50)">
+            <div>
+              <router-link v-bind:to="key" class="dropdown-item" style="white-space: normal; margin: 0; padding: 1px; border: 0; border-radius: 3px">
+                <div class="card shadow-sm">
+                  <img v-bind:src="contentList[key].images[0][0]" class="card-img-top" width="100%" focusable="false" loading="lazy">
+                  <div class="card-body">
+                    <h2>{{contentList[key].title}}</h2>
+                    <span class="bd">
+                      {{contentList[key].year}}
+                    </span>
+                    <span v-for="tag in contentList[key].tags" class="bd">
+                      #{{tag}}
+                    </span>
+                    <p class="card-text" style="margin-top:.5rem">{{contentList[key].description}}</p>
+                    <svg height="2em" width="100%" version="1.1" viewBox="0,0,1000,100">
+                      <path style="fill:none; opacity: 1; stroke:white; stroke-width:5" v-bind:d="'M10,50L990,50'"/>
+                      <g v-for="i in articleLength" style="fill:none; opacity: 1; stroke:white; stroke-width:5">
+                        <path v-bind:d="'M'+(425-50*articleLength+100*i)+',10L'+(425-50*articleLength+50+100*i)+',90'"/>
+                      </g>
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </router-link>
+              </router-link>
+            </div>
           </div>
         </div>
       </div>
@@ -141,7 +148,7 @@
           {{content.year}}
         </span>
         <span v-for="tag in content.tags" class="bd">
-          #{{tag}}
+          <router-link v-bind:to="'/?tag='+tag" style="padding: 0.2rem;">#{{tag}}</router-link>
         </span>
       </div>
       <p class="bd-lead">
