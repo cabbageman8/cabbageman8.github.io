@@ -225,13 +225,13 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li v-for="cat in categories" class="nav-item dropdown">
+              <li v-for="category in categories" class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="pythonDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  {{cat}}
+                  {{category}}
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li v-for="key in Object.keys(contentList).filter(function(val){return contentList[val].tags[0] == cat})">
-                    <router-link v-bind:to="'/'+key" class="dropdown-item">{{key}}</router-link>
+                  <li v-for="project in Object.keys(contentList).filter(function(val){return contentList[val].tags[0] == category})">
+                    <router-link v-bind:to="'/'+project" class="dropdown-item">{{project}}</router-link>
                   </li>
                 </ul>
               </li>
@@ -321,7 +321,7 @@
   Object.values(contentList).forEach((project) => categories.add(project["tags"][0]));
   const router = new VueRouter({
     routes: [
-      { path: '/AboutMe', component: {data() {return {categories}}, template: '#AboutMe'} },
+      { path: '/AboutMe', component: {template: '#AboutMe'} },
       { path: '/:project', component: {data() {return {contentList, categories}}, template: '#normalPage'}},
       { path: '*', component: {data() {return {contentList, categories}}, template: '#home'} },
     ]
@@ -329,7 +329,7 @@
 
   const vueapp = new Vue({
     router,
-    data() {
+    data() { // We need to pass through objects used in header
       return {
         contentList,
         categories
