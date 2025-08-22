@@ -233,7 +233,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li v-for="project in Object.keys(contentList).filter(function(val){return contentList[val].tags[0] == category})">
-                    <router-link v-bind:to="'/'+project" class="dropdown-item">{{project}}</router-link>
+                    <router-link v-bind:to="'/'+project" class="dropdown-item">{{contentList[project]["title"]}}</router-link>
                   </li>
                 </ul>
               </li>
