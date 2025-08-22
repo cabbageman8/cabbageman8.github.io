@@ -139,7 +139,7 @@
     </div>
   </template>
   <template id="normalPage">
-    <div class="bd-intro ps-lg-4" style="padding-left: 1rem">
+    <div class="bd-intro ps-lg-4" style="padding-left: 1rem" :set="content = contentList[$route.params.project]">
       <h1 class="bd-title" style="padding-top: 1rem">
         {{content.title}}
       </h1>
@@ -225,36 +225,14 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item dropdown">
+              <li v-for="cat in categories" class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="pythonDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Python
+                  {{cat}}
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><router-link to="/PhysicalAudio" class="dropdown-item">Physical Audio</router-link></li>
-                  <li><router-link to="/BeeEcology" class="dropdown-item">Bee Ecology</router-link></li>
-                  <li><router-link to="/Nitrogen" class="dropdown-item">Nitrogen</router-link></li>
-                  <li><router-link to="/NOR" class="dropdown-item">NOR</router-link></li>
-                  <li><router-link to="/InsectBox" class="dropdown-item">Insect Box</router-link></li>
-                  <li><router-link to="/PythonistaWork" class="dropdown-item">Pythonista Work</router-link></li>
-                  <li><router-link to="/Boxscape" class="dropdown-item">Boxscape</router-link></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="shadersDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Shaders
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><router-link to="/FluidSimulator" class="dropdown-item">Fluid Simulator</router-link></li>
-                  <li><router-link to="/Webgl" class="dropdown-item">Webgl</router-link></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="eventsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Public Events
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><router-link to="/PyconAUSydney" class="dropdown-item">PyconAU Sydney</router-link></li>
-                  <li><router-link to="/STEMCongress" class="dropdown-item">STEM Congress</router-link></li>
+                  <li v-for="key in Object.keys(contentList).filter(function(val){return contentList[val].tags[0] == cat})">
+                    <router-link v-bind:to="'/'+key" class="dropdown-item">{{key}}</router-link>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -339,27 +317,24 @@
 
 <script type="module">
   import contentList from './content.json' with { type: "json" };
-  
+  var categories = new Set();
+  Object.values(contentList).forEach((project) => categories.add(project["tags"][0]));
   const router = new VueRouter({
     routes: [
-      { path: '/AboutMe', component: {data() {return {}}, template: '#AboutMe'} },
-      { path: '/Nitrogen', component: {data() {return {content: contentList["Nitrogen"]}}, template: '#normalPage'}},
-      { path: '/BeeEcology', component: {data() {return {content: contentList["BeeEcology"]}}, template: '#normalPage'}},
-      { path: '/PhysicalAudio', component: {data() {return {content: contentList["PhysicalAudio"]}}, template: '#normalPage'}},
-      { path: '/Nor', component: {data() {return {content: contentList["Nor"]}}, template: '#normalPage'}},
-      { path: '/InsectBox', component: {data() {return {content: contentList["InsectBox"]}}, template: '#normalPage'}},
-      { path: '/PythonistaWork', component: {data() {return {content: contentList["PythonistaWork"]}}, template: '#normalPage'}},
-      { path: '/Boxscape', component: {data() {return {content: contentList["Boxscape"]}}, template: '#normalPage'}},
-      { path: '/FluidSimulator', component: {data() {return {content: contentList["FluidSimulator"]}}, template: '#normalPage'}},
-      { path: '/Webgl', component: {data() {return {content: contentList["Webgl"]}}, template: '#normalPage'}},
-      { path: '/PyconAUSydney', component: {data() {return {content: contentList["PyconAUSydney"]}}, template: '#normalPage'}},
-      { path: '/STEMCongress', component: {data() {return {content: contentList["STEMCongress"]}}, template: '#normalPage'}},
-      { path: '*', component: {data() {return {contentList}}, template: '#home'} },
+      { path: '/AboutMe', component: {data() {return {categories}}, template: '#AboutMe'} },
+      { path: '/:project', component: {data() {return {contentList, categories}}, template: '#normalPage'}},
+      { path: '*', component: {data() {return {contentList, categories}}, template: '#home'} },
     ]
   })
 
   const vueapp = new Vue({
-    router
+    router,
+    data() {
+      return {
+        contentList,
+        categories
+      }
+    }
   }).$mount('#vueapp')
 
   import * as glsetup from "./glsetup.js";

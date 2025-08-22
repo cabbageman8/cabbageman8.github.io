@@ -74,7 +74,7 @@
   "FluidSimulator": {
     "title": "Fluid Simulator",
     "year": "2021",
-    "tags": ["Unity","Compute-Shader","Physics","Simulation"],
+    "tags": ["Shaders","Unity","Compute-Shader","Physics","Simulation"],
     "vids": [
       "vids/356785_Trim.mp4"],
     "images": [
@@ -141,7 +141,7 @@
   "PyconAUSydney": {
     "title": "Speaker at Pycon-AU",
     "year": "2018",
-    "tags": ["Python","NOR","Sydney","Public-Event"],
+    "tags": ["Events","Python","NOR","Sydney"],
     "images": [
       ["img/PyconAUSydney/IMG_6462.JPG"],
       ["img/PyconAUSydney/IMG_9029.JPG"],
@@ -191,7 +191,7 @@
   "Webgl": {
     "title": "WebGL Shaders",
     "year": "2019",
-    "tags": ["WebGL","Fragment-Shader","Fractals"],
+    "tags": ["Shaders","WebGL","Fragment-Shader","Fractals"],
     "images": [
       ["img/Webgl/img46357.png"],
       ["img/Webgl/img4582.png"],
@@ -207,7 +207,7 @@
   "STEMCongress": {
     "title": "STEM Aboriginal Student Congress",
     "year": "2018",
-    "tags": ["STEM","Python","Public-Event"],
+    "tags": ["Events","STEM","Python"],
     "images": [["img/STEMCongress/img57463875.JPG"]],
     "description": "Helped students from across the state to learn about software development. By the end the students had each made a basic IOS app using SpriteKit in Pythonista",
     "paragraphs": [
