@@ -103,6 +103,7 @@
       ["img/nor/IMG_7017.PNG"],
       ["img/nor/IMG_7014.PNG"],
       ["img/nor/IMG_7010.PNG"],
+      ["img/nor/Screen Shot 2019-09-03 at 10.29.27 pm.png"],
       ["img/nor/IMG_7009.PNG"],
       ["img/nor/IMG_7016.PNG"]],
     "iframes": [
@@ -200,6 +201,12 @@
       ["img/Webgl/img786378.png"],
       ["img/Webgl/img3785857.png"]],
     "description": "Using knowledge of fragment shaders, explored mathematical concepts in web browser.",
+    "iframes": [
+        ["webgl/WebGL/cabbagefractal2.html", "View", "webgl/WebGL/cabbagefractal2.html"],
+        ["webgl/WebGL/chekerboard fractal.html", "View", "webgl/WebGL/chekerboard fractal.html"],
+        ["webgl/WebGL/hopf fibration.html", "View", "webgl/WebGL/hopf fibration.html"],
+        ["webgl/WebGL/2d parametric graph test.html", "View", "webgl/WebGL/2d parametric graph test.html"],
+        ["webgl/WebGL/2d parametric graph test2.html", "View", "webgl/WebGL/2d parametric graph test2.html"]],
     "paragraphs": [
       ""
     ]
