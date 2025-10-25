@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en' class=''>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Full Year Calender</title>
+    <!-- vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Bootstrap CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+</head>
+<body>
+    <noscript>
+        <strong>
+            Please enable js to continue.
+        </strong>
+    </noscript>
+    <div id="app">
+        <h1>{{theDate.getFullYear()}}</h1>
+        <table>
+            <tr>
+                <th v-for="day in Array(38).keys()"
+                :style="{'color': getDateColor(-1, day) }">
+                    {{(day > 0) ? (dayNames[day%dayNames.length]) : ""}}
+                </th>
+            </tr>
+            <tr v-for="month in Array(12).keys()">
+                <td v-for="day in Array(getNumDays(month)+getFirstDay(month)).keys()"
+                :style="{'background-color': getDateColor(month, day) }">
+                    <div v-if="day == 0">{{monthNames[month]}}</div>
+                    <div v-else>{{(day-getFirstDay(month) >= 0) ? (day-getFirstDay(month)+1) : ""}}</div>
+                </td>
+            </tr>
+        </table> 
+    </div>
+</body>
+
+<script>
+    const { createApp, ref, reactive } = Vue
+
+    const theDate = new Date();
+    function getNumDays(month)
+    {
+        lastDay = new Date(theDate.getFullYear(), month+1, 0);
+        return lastDay.getDate()
+    }
+    function getFirstDay(month)
+    {
+        firstDate = new Date(theDate.getFullYear(), month, 1);
+        let firstDay = firstDate.getDay();
+        return (firstDay > 0 ? firstDay : 7)
+    }
+    function getDateColor(month, day)
+    {
+        if (month > -1 && day > 0 && day-getFirstDay(month) < 0)
+        {
+            return "transparent"
+        }
+        if (theDate.getDate() == day-getFirstDay(theDate.getMonth())+1)
+        {
+            if (theDate.getMonth() == month)
+            {
+                return "inherit"
+            }
+            return "green"
+        }
+        if (theDate.getMonth() == month)
+        {
+            return "Coral"
+        }
+        return (day%2) ? "lightblue" : "CornflowerBlue"
+    }
+  
+    const app = createApp({
+        data() {
+            return {
+            theDate : theDate,
+            dayNames : ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+            monthNames : ["Januaray","February","March","April",'May',"June","July","August","September","October","November","December"],
+            getNumDays : getNumDays,
+            getFirstDay : getFirstDay,
+            getDateColor : getDateColor
+            }
+        }
+    })
+
+    app.mount('#app')
+</script>
+
+</html>
